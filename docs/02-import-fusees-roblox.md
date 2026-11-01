@@ -21,9 +21,25 @@ Et dans le projet Roblox :
 | Fichier | Rôle |
 |---|---|
 | `src/shared/Config/Rockets.luau` | Catalogue Luau généré (couleurs, aura, multiplicateur, prix) |
-| `tools/rockets/ApplyRockets.studio.luau` | Script à coller dans la barre de commande de Studio après l'import |
+| `tools/rockets/AutoImportRockets.studio.luau` | Script tout-en-un : importe les FBX et applique couleurs/auras (Studio ouvert) |
+| `tools/rockets/ApplyRockets.studio.luau` | Script à coller après un import manuel avec Import 3D |
 
-## 2. Importer dans Studio (étapes)
+## 2. Import automatique (Studio ouvert, un seul script)
+
+1. Télécharge le dépôt : GitHub → **Code** → **Download ZIP**, décompresse-le.
+2. Ouvre `tools/rockets/AutoImportRockets.studio.luau` dans un éditeur de texte et remplace la ligne
+   `FBX_FOLDER` par le chemin du dossier `assets/rockets/fbx` sur ton ordinateur, par exemple
+   `[[C:\Users\Zakir\Downloads\roblox-master\assets\rockets\fbx]]`.
+3. Dans Studio, ouvre ton place, puis **View → Command Bar**, colle tout le script, Entrée.
+4. Le script importe les 40 FBX avec l'importeur 3D de Studio, applique couleurs, Neon et auras, et range
+   les fusées dans `ReplicatedStorage > Assets > Rockets`. Compte 2 à 5 minutes, la fenêtre Output
+   affiche une ligne par fusée.
+
+Si Output affiche `Import() a échoué` ou `impossible d'ouvrir`, vérifie le chemin `FBX_FOLDER`. Si ça
+persiste, ta version de Studio n'expose pas l'importeur par script : passe par la méthode manuelle
+ci-dessous (10 minutes).
+
+## 3. Import manuel avec Import 3D (étapes)
 
 1. Ouvre ton place dans Roblox Studio.
 2. Mets le ModuleScript `Rockets.luau` dans `ReplicatedStorage > Shared > Config > Rockets`
@@ -54,13 +70,13 @@ Et dans le projet Roblox :
 Pour poser une fusée sur la rampe de lancement : `ReplicatedStorage.Assets.Rockets.WoodenDart:Clone()`,
 puis `model:PivotTo(padCFrame)`. Le pivot est à la base de la tuyère, la fusée pointe vers +Y.
 
-## 3. Si les couleurs n'apparaissent pas à l'import
+## 4. Si les couleurs n'apparaissent pas à l'import
 
 C'est normal : Roblox n'importe pas fidèlement les matériaux Blender. **C'est le script
 `ApplyRockets.studio.luau` qui applique les couleurs**, depuis le catalogue. Si une pièce reste grise,
 c'est que son nom a été modifié par l'importeur : le script affiche `pièce inconnue …` dans Output.
 
-## 4. Modifier une fusée ou en ajouter
+## 5. Modifier une fusée ou en ajouter
 
 1. Édite `tools/rockets/specs.py` (forme, couleurs, aura) — chaque fusée est un petit dictionnaire commenté.
 2. Regénère : `python tools/rockets/build_rockets.py --ids 12` (ou sans `--ids` pour les 40).
@@ -70,7 +86,7 @@ c'est que son nom a été modifié par l'importeur : le script affiche `pièce i
 Le script Blender tourne avec le module `bpy` (`pip install bpy`) ou dans Blender :
 `blender -b -P tools/rockets/build_rockets.py -- --out assets/rockets`.
 
-## 5. Limites Roblox respectées
+## 6. Limites Roblox respectées
 
 - Chaque pièce fait moins de 10 000 triangles (la plupart entre 50 et 1 500).
 - Les fusées de cristal (33, 34, 38) sont volontairement à facettes (6 à 8 côtés).
