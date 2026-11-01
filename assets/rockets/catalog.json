@@ -1,0 +1,5922 @@
+{
+  "worlds": {
+    "1": {
+      "name": "Débutant",
+      "subtitle": "Fusées simples, bricolées et légères",
+      "color": "#38D430",
+      "bg": "#4FB84A"
+    },
+    "2": {
+      "name": "Technologie",
+      "subtitle": "Fusées améliorées, plus rapides et plus stables",
+      "color": "#30C8FF",
+      "bg": "#2A7FD4"
+    },
+    "3": {
+      "name": "Expérimental",
+      "subtitle": "Fusées avancées, modules spéciaux et nouvelles énergies",
+      "color": "#FFB13B",
+      "bg": "#C8622A"
+    },
+    "4": {
+      "name": "Légendaire",
+      "subtitle": "Fusées d'élite, ultra-performantes et à la technologie ultime",
+      "color": "#D23BFF",
+      "bg": "#3A1F6B"
+    }
+  },
+  "rockets": [
+    {
+      "id": 1,
+      "key": "WoodenDart",
+      "name": "Dard de bois",
+      "world": 1,
+      "height": 7.3,
+      "radius": 1.67,
+      "finish": "wood",
+      "aura": {
+        "color": "#FFB04A",
+        "strength": 0.3
+      },
+      "stats": {
+        "multiplier": 1.0,
+        "cost": 0
+      },
+      "colors": {
+        "body": "#6B4A2B",
+        "accent": "#3D2A17",
+        "nose": "#4A3220",
+        "fins": "#5A3E26",
+        "nozzle": "#2B2B2B",
+        "glow": "#FFB04A",
+        "flame": "#FF9A1F"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#3D2A17",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.8
+        },
+        {
+          "name": "Band_2",
+          "tris": 124,
+          "color": "#3D2A17",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.8
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#6B4A2B",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.8
+        },
+        {
+          "name": "Fin_1",
+          "tris": 8,
+          "color": "#5A3E26",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.8
+        },
+        {
+          "name": "Fin_2",
+          "tris": 8,
+          "color": "#5A3E26",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.8
+        },
+        {
+          "name": "Fin_3",
+          "tris": 8,
+          "color": "#5A3E26",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.8
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 62,
+          "color": "#4A3220",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.8
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#2B2B2B",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_01_WoodenDart"
+    },
+    {
+      "id": 2,
+      "key": "BrassBarrel",
+      "name": "Tonneau de cuivre",
+      "world": 1,
+      "height": 5.7,
+      "radius": 1.63,
+      "finish": "metal",
+      "aura": {
+        "color": "#FFC46B",
+        "strength": 0.35
+      },
+      "stats": {
+        "multiplier": 1.3,
+        "cost": 150
+      },
+      "colors": {
+        "body": "#8C6D4A",
+        "accent": "#5C4630",
+        "nose": "#5C4630",
+        "fins": "#5C4630",
+        "window": "#8FE3FF",
+        "nozzle": "#3A3A3A",
+        "metal": "#4E4A44",
+        "glow": "#FFC46B",
+        "flame": "#FF9A1F"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 700,
+          "color": "#8C6D4A",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 510,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Ring_1",
+          "tris": 960,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Ring_2",
+          "tris": 960,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#8FE3FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        }
+      ],
+      "file": "Rocket_02_BrassBarrel"
+    },
+    {
+      "id": 3,
+      "key": "OrangePod",
+      "name": "Capsule orange",
+      "world": 1,
+      "height": 5.6,
+      "radius": 1.91,
+      "finish": "paint",
+      "aura": {
+        "color": "#FFD27A",
+        "strength": 0.4
+      },
+      "stats": {
+        "multiplier": 1.7,
+        "cost": 400
+      },
+      "colors": {
+        "body": "#FF7A1A",
+        "accent": "#2E2E2E",
+        "nose": "#FF7A1A",
+        "fins": "#2E2E2E",
+        "window": "#9BE8FF",
+        "glow": "#FFD27A",
+        "flame": "#FFB300"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 700,
+          "color": "#FF7A1A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#2E2E2E",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#2E2E2E",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#2E2E2E",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 510,
+          "color": "#FF7A1A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#2E2E2E",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_03_OrangePod"
+    },
+    {
+      "id": 4,
+      "key": "ClassicWhite",
+      "name": "Classique blanche",
+      "world": 1,
+      "height": 7.3,
+      "radius": 1.94,
+      "finish": "paint",
+      "aura": {
+        "color": "#FFD27A",
+        "strength": 0.45
+      },
+      "stats": {
+        "multiplier": 2.2,
+        "cost": 900
+      },
+      "colors": {
+        "body": "#F4F4F4",
+        "accent": "#FF6A00",
+        "nose": "#FF6A00",
+        "fins": "#FF6A00",
+        "window": "#7FFFB0",
+        "glow": "#FFD27A",
+        "flame": "#FFB300"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 8,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 8,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 8,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_4",
+          "tris": 8,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#7FFFB0",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_04_ClassicWhite"
+    },
+    {
+      "id": 5,
+      "key": "SkyBlue",
+      "name": "Bleu ciel",
+      "world": 1,
+      "height": 7.7,
+      "radius": 2.04,
+      "finish": "paint",
+      "aura": {
+        "color": "#8FC8FF",
+        "strength": 0.5
+      },
+      "stats": {
+        "multiplier": 2.8,
+        "cost": 1800
+      },
+      "colors": {
+        "body": "#F4F4F4",
+        "accent": "#2F7BFF",
+        "nose": "#2F7BFF",
+        "fins": "#2F7BFF",
+        "window": "#9BE8FF",
+        "glow": "#8FC8FF",
+        "flame": "#FFB300"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Window_2",
+          "tris": 76,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "WindowFrame_2",
+          "tris": 76,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_05_SkyBlue"
+    },
+    {
+      "id": 6,
+      "key": "TallNeedle",
+      "name": "Aiguille blanche",
+      "world": 1,
+      "height": 8.9,
+      "radius": 1.84,
+      "finish": "paint",
+      "aura": {
+        "color": "#8FC8FF",
+        "strength": 0.5
+      },
+      "stats": {
+        "multiplier": 3.5,
+        "cost": 3500
+      },
+      "colors": {
+        "body": "#F6F6F6",
+        "accent": "#2F7BFF",
+        "nose": "#2F7BFF",
+        "fins": "#D9D9D9",
+        "window": "#9BE8FF",
+        "glow": "#8FC8FF",
+        "flame": "#FFB300"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#F6F6F6",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Collar",
+          "tris": 124,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#D9D9D9",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#D9D9D9",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#D9D9D9",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_06_TallNeedle"
+    },
+    {
+      "id": 7,
+      "key": "TwinOrange",
+      "name": "Double orange",
+      "world": 1,
+      "height": 6.9,
+      "radius": 1.64,
+      "finish": "paint",
+      "aura": {
+        "color": "#FFD27A",
+        "strength": 0.5
+      },
+      "stats": {
+        "multiplier": 4.3,
+        "cost": 6500
+      },
+      "colors": {
+        "body": "#F4F4F4",
+        "accent": "#FF6A00",
+        "nose": "#FF6A00",
+        "fins": "#FF6A00",
+        "window": "#9BE8FF",
+        "glow": "#FFD27A",
+        "flame": "#FFB300"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Booster_1",
+          "tris": 60,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Booster_2",
+          "tris": 60,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterFlame_1",
+          "tris": 46,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterFlame_2",
+          "tris": 46,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterNose_1",
+          "tris": 318,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNose_2",
+          "tris": 318,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_1",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_2",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 8,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 8,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 8,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_07_TwinOrange"
+    },
+    {
+      "id": 8,
+      "key": "NavySleek",
+      "name": "Marine furtive",
+      "world": 1,
+      "height": 7.7,
+      "radius": 1.93,
+      "finish": "metal",
+      "aura": {
+        "color": "#8FC8FF",
+        "strength": 0.55
+      },
+      "stats": {
+        "multiplier": 5.4,
+        "cost": 12000
+      },
+      "colors": {
+        "body": "#1E2A5A",
+        "accent": "#C9CED6",
+        "nose": "#C9CED6",
+        "fins": "#C9CED6",
+        "window": "#9BE8FF",
+        "metal": "#9AA0A8",
+        "glow": "#8FC8FF",
+        "flame": "#FFB300"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#1E2A5A",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Booster_1",
+          "tris": 60,
+          "color": "#9AA0A8",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Booster_2",
+          "tris": 60,
+          "color": "#9AA0A8",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "BoosterFlame_1",
+          "tris": 46,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterFlame_2",
+          "tris": 46,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterNose_1",
+          "tris": 318,
+          "color": "#9AA0A8",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "BoosterNose_2",
+          "tris": 318,
+          "color": "#9AA0A8",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "BoosterNozzle_1",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_2",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_2",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_3",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_4",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        }
+      ],
+      "file": "Rocket_08_NavySleek"
+    },
+    {
+      "id": 9,
+      "key": "BigFin",
+      "name": "Grands ailerons",
+      "world": 1,
+      "height": 7.95,
+      "radius": 2.48,
+      "finish": "paint",
+      "aura": {
+        "color": "#FFD27A",
+        "strength": 0.6
+      },
+      "stats": {
+        "multiplier": 6.8,
+        "cost": 22000
+      },
+      "colors": {
+        "body": "#F4F4F4",
+        "accent": "#FF6A00",
+        "nose": "#FF6A00",
+        "fins": "#FF6A00",
+        "window": "#9BE8FF",
+        "glow": "#FFD27A",
+        "flame": "#FFB300"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_09_BigFin"
+    },
+    {
+      "id": 10,
+      "key": "SunsetSwept",
+      "name": "Couchant",
+      "world": 1,
+      "height": 7.95,
+      "radius": 2.88,
+      "finish": "paint",
+      "aura": {
+        "color": "#FFD27A",
+        "strength": 0.65
+      },
+      "stats": {
+        "multiplier": 8.5,
+        "cost": 40000
+      },
+      "colors": {
+        "body": "#FF7A1A",
+        "accent": "#F4F4F4",
+        "nose": "#F4F4F4",
+        "fins": "#F4F4F4",
+        "window": "#9BE8FF",
+        "glow": "#FFD27A",
+        "flame": "#FFB300"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FF7A1A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Band_2",
+          "tris": 124,
+          "color": "#FF7A1A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#FF7A1A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB300",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_10_SunsetSwept"
+    },
+    {
+      "id": 11,
+      "key": "OrbiterDish",
+      "name": "Orbiteur à parabole",
+      "world": 2,
+      "height": 5.05,
+      "radius": 2.08,
+      "finish": "metal",
+      "aura": {
+        "color": "#5EC8FF",
+        "strength": 0.8
+      },
+      "stats": {
+        "multiplier": 11,
+        "cost": 75000
+      },
+      "colors": {
+        "body": "#C9CED6",
+        "accent": "#FF6A00",
+        "nose": "#8A9099",
+        "fins": "#8A9099",
+        "window": "#5EC8FF",
+        "metal": "#6F757D",
+        "glow": "#5EC8FF",
+        "flame": "#FF9A1F"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 188,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Dish",
+          "tris": 352,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "DishMast",
+          "tris": 28,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "DishTip",
+          "tris": 120,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Foot_1",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Foot_2",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Foot_3",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Leg_1",
+          "tris": 28,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Leg_2",
+          "tris": 28,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Leg_3",
+          "tris": 28,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Window_2",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "WindowFrame_2",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        }
+      ],
+      "file": "Rocket_11_OrbiterDish"
+    },
+    {
+      "id": 12,
+      "key": "SolarSat",
+      "name": "Satellite solaire",
+      "world": 2,
+      "height": 6.17,
+      "radius": 3.7,
+      "finish": "metal",
+      "aura": {
+        "color": "#5EC8FF",
+        "strength": 0.85
+      },
+      "stats": {
+        "multiplier": 14,
+        "cost": 140000
+      },
+      "colors": {
+        "body": "#D9DDE3",
+        "accent": "#FF6A00",
+        "nose": "#8A9099",
+        "fins": "#8A9099",
+        "window": "#5EC8FF",
+        "metal": "#6F757D",
+        "panel": "#1E3A8A",
+        "glow": "#5EC8FF",
+        "flame": "#FF9A1F"
+      },
+      "parts": [
+        {
+          "name": "Antenna",
+          "tris": 28,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "AntennaTip",
+          "tris": 120,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Arm_1",
+          "tris": 28,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Arm_2",
+          "tris": 28,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#D9DDE3",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 510,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Panel_1",
+          "tris": 12,
+          "color": "#1E3A8A",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Panel_2",
+          "tris": 12,
+          "color": "#1E3A8A",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "PanelFrame_1",
+          "tris": 12,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "PanelFrame_2",
+          "tris": 12,
+          "color": "#6F757D",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        }
+      ],
+      "file": "Rocket_12_SolarSat"
+    },
+    {
+      "id": 13,
+      "key": "SilverArrow",
+      "name": "Flèche d'argent",
+      "world": 2,
+      "height": 8.1,
+      "radius": 2.03,
+      "finish": "chrome",
+      "aura": {
+        "color": "#FF9A1F",
+        "strength": 0.9
+      },
+      "stats": {
+        "multiplier": 18,
+        "cost": 260000
+      },
+      "colors": {
+        "body": "#C9CED6",
+        "accent": "#FF6A00",
+        "nose": "#FF6A00",
+        "fins": "#C9CED6",
+        "window": "#5EC8FF",
+        "glow": "#FF9A1F",
+        "flame": "#FF9A1F"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 12,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 12,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        }
+      ],
+      "file": "Rocket_13_SilverArrow"
+    },
+    {
+      "id": 14,
+      "key": "AzureJet",
+      "name": "Jet azur",
+      "world": 2,
+      "height": 8.35,
+      "radius": 2.3,
+      "finish": "paint",
+      "aura": {
+        "color": "#5EC8FF",
+        "strength": 0.9
+      },
+      "stats": {
+        "multiplier": 23,
+        "cost": 480000
+      },
+      "colors": {
+        "body": "#F4F4F4",
+        "accent": "#2F7BFF",
+        "nose": "#2F7BFF",
+        "fins": "#2F7BFF",
+        "window": "#5EC8FF",
+        "glow": "#5EC8FF",
+        "flame": "#5EC8FF"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#2F7BFF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_14_AzureJet"
+    },
+    {
+      "id": 15,
+      "key": "TwinStack",
+      "name": "Double étage",
+      "world": 2,
+      "height": 7.55,
+      "radius": 1.67,
+      "finish": "metal",
+      "aura": {
+        "color": "#FF9A1F",
+        "strength": 0.95
+      },
+      "stats": {
+        "multiplier": 30,
+        "cost": 900000
+      },
+      "colors": {
+        "body": "#8A9099",
+        "accent": "#FF6A00",
+        "nose": "#F4F4F4",
+        "fins": "#FF6A00",
+        "window": "#5EC8FF",
+        "metal": "#6F757D",
+        "glow": "#FF9A1F",
+        "flame": "#FF9A1F"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 252,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_2",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_3",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_2",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_3",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Ring_1",
+          "tris": 960,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        }
+      ],
+      "file": "Rocket_15_TwinStack"
+    },
+    {
+      "id": 16,
+      "key": "StratoWing",
+      "name": "Aile strato",
+      "world": 2,
+      "height": 8.35,
+      "radius": 3.36,
+      "finish": "paint",
+      "aura": {
+        "color": "#5EC8FF",
+        "strength": 1.0
+      },
+      "stats": {
+        "multiplier": 38,
+        "cost": 1700000.0
+      },
+      "colors": {
+        "body": "#F4F4F4",
+        "accent": "#2F7BFF",
+        "nose": "#2F7BFF",
+        "fins": "#2F7BFF",
+        "window": "#5EC8FF",
+        "glow": "#5EC8FF",
+        "flame": "#5EC8FF"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Cockpit",
+          "tris": 528,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_16_StratoWing"
+    },
+    {
+      "id": 17,
+      "key": "ClusterCore",
+      "name": "Cœur en grappe",
+      "world": 2,
+      "height": 6.95,
+      "radius": 1.65,
+      "finish": "metal",
+      "aura": {
+        "color": "#5EC8FF",
+        "strength": 1.0
+      },
+      "stats": {
+        "multiplier": 48,
+        "cost": 3200000.0
+      },
+      "colors": {
+        "body": "#8A9099",
+        "accent": "#2F7BFF",
+        "nose": "#F4F4F4",
+        "fins": "#2F7BFF",
+        "window": "#5EC8FF",
+        "metal": "#6F757D",
+        "glow": "#5EC8FF",
+        "flame": "#5EC8FF"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Booster_1",
+          "tris": 60,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Booster_2",
+          "tris": 60,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Booster_3",
+          "tris": 60,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Booster_4",
+          "tris": 60,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "BoosterFlame_1",
+          "tris": 46,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterFlame_2",
+          "tris": 46,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterFlame_3",
+          "tris": 46,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterFlame_4",
+          "tris": 46,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterNose_1",
+          "tris": 318,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "BoosterNose_2",
+          "tris": 318,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "BoosterNose_3",
+          "tris": 318,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "BoosterNose_4",
+          "tris": 318,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "BoosterNozzle_1",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_2",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_3",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_4",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        }
+      ],
+      "file": "Rocket_17_ClusterCore"
+    },
+    {
+      "id": 18,
+      "key": "HaloProbe",
+      "name": "Sonde à halo",
+      "world": 2,
+      "height": 7.75,
+      "radius": 3.0,
+      "finish": "chrome",
+      "aura": {
+        "color": "#FF9A1F",
+        "strength": 1.05
+      },
+      "stats": {
+        "multiplier": 60,
+        "cost": 6000000.0
+      },
+      "colors": {
+        "body": "#C9CED6",
+        "accent": "#FF6A00",
+        "nose": "#C9CED6",
+        "fins": "#C9CED6",
+        "window": "#5EC8FF",
+        "glow": "#FF9A1F",
+        "flame": "#FF9A1F"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_1",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_2",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_3",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Halo_1",
+          "tris": 960,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        }
+      ],
+      "file": "Rocket_18_HaloProbe"
+    },
+    {
+      "id": 19,
+      "key": "CobaltTower",
+      "name": "Tour cobalt",
+      "world": 2,
+      "height": 9.0,
+      "radius": 2.01,
+      "finish": "paint",
+      "aura": {
+        "color": "#5EC8FF",
+        "strength": 1.1
+      },
+      "stats": {
+        "multiplier": 75,
+        "cost": 11000000.0
+      },
+      "colors": {
+        "body": "#2F7BFF",
+        "accent": "#F4F4F4",
+        "nose": "#F4F4F4",
+        "fins": "#F4F4F4",
+        "window": "#5EC8FF",
+        "glow": "#5EC8FF",
+        "flame": "#5EC8FF"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 380,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 12,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 12,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Window_2",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "WindowFrame_2",
+          "tris": 76,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_19_CobaltTower"
+    },
+    {
+      "id": 20,
+      "key": "HeavyLifter",
+      "name": "Lanceur lourd",
+      "world": 2,
+      "height": 8.2,
+      "radius": 2.04,
+      "finish": "paint",
+      "aura": {
+        "color": "#FF9A1F",
+        "strength": 1.15
+      },
+      "stats": {
+        "multiplier": 95,
+        "cost": 20000000.0
+      },
+      "colors": {
+        "body": "#F4F4F4",
+        "accent": "#FF6A00",
+        "nose": "#FF6A00",
+        "fins": "#FF6A00",
+        "window": "#5EC8FF",
+        "glow": "#FF9A1F",
+        "flame": "#FF9A1F"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Booster_1",
+          "tris": 60,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Booster_2",
+          "tris": 60,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterFlame_1",
+          "tris": 46,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterFlame_2",
+          "tris": 46,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterNose_1",
+          "tris": 318,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNose_2",
+          "tris": 318,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_1",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_2",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_2",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_3",
+          "tris": 62,
+          "color": "#FF9A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_2",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_3",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF6A00",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_20_HeavyLifter"
+    },
+    {
+      "id": 21,
+      "key": "BronzeLander",
+      "name": "Atterrisseur bronze",
+      "world": 3,
+      "height": 5.97,
+      "radius": 2.4,
+      "finish": "metal",
+      "aura": {
+        "color": "#FFB04A",
+        "strength": 1.3
+      },
+      "stats": {
+        "multiplier": 120,
+        "cost": 40000000.0
+      },
+      "colors": {
+        "body": "#A3763E",
+        "accent": "#5C4630",
+        "nose": "#5C4630",
+        "window": "#FFD27A",
+        "metal": "#4E4A44",
+        "glow": "#FFB04A",
+        "flame": "#FFB04A"
+      },
+      "parts": [
+        {
+          "name": "Antenna",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "AntennaTip",
+          "tris": 120,
+          "color": "#FFB04A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Body",
+          "tris": 700,
+          "color": "#A3763E",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB04A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Foot_1",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Foot_2",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Foot_3",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Foot_4",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Leg_1",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Leg_2",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Leg_3",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Leg_4",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nose",
+          "tris": 510,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Ring_1",
+          "tris": 960,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#FFD27A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        }
+      ],
+      "file": "Rocket_21_BronzeLander"
+    },
+    {
+      "id": 22,
+      "key": "CopperSolar",
+      "name": "Cuivre solaire",
+      "world": 3,
+      "height": 5.55,
+      "radius": 3.75,
+      "finish": "metal",
+      "aura": {
+        "color": "#5EC8FF",
+        "strength": 1.3
+      },
+      "stats": {
+        "multiplier": 150,
+        "cost": 75000000.0
+      },
+      "colors": {
+        "body": "#B8742F",
+        "accent": "#5C4630",
+        "nose": "#5C4630",
+        "fins": "#5C4630",
+        "window": "#5EC8FF",
+        "metal": "#4E4A44",
+        "panel": "#1E3A8A",
+        "glow": "#5EC8FF",
+        "flame": "#FFB04A"
+      },
+      "parts": [
+        {
+          "name": "Arm_1",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Arm_2",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#B8742F",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB04A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 510,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Panel_1",
+          "tris": 12,
+          "color": "#1E3A8A",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Panel_2",
+          "tris": 12,
+          "color": "#1E3A8A",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "PanelFrame_1",
+          "tris": 12,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "PanelFrame_2",
+          "tris": 12,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#5C4630",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        }
+      ],
+      "file": "Rocket_22_CopperSolar"
+    },
+    {
+      "id": 23,
+      "key": "TripodDish",
+      "name": "Trépied radar",
+      "world": 3,
+      "height": 7.4,
+      "radius": 2.69,
+      "finish": "metal",
+      "aura": {
+        "color": "#5EC8FF",
+        "strength": 1.35
+      },
+      "stats": {
+        "multiplier": 190,
+        "cost": 140000000.0
+      },
+      "colors": {
+        "body": "#8A9099",
+        "accent": "#2E2E2E",
+        "nose": "#C9CED6",
+        "metal": "#4E4A44",
+        "glow": "#5EC8FF",
+        "flame": "#5EC8FF"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#8A9099",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Dish",
+          "tris": 352,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "DishMast",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "DishTip",
+          "tris": 120,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Foot_1",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Foot_2",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Foot_3",
+          "tris": 120,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Halo_1",
+          "tris": 960,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Leg_1",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Leg_2",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Leg_3",
+          "tris": 28,
+          "color": "#4E4A44",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 0.85,
+          "roughness": 0.35
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_23_TripodDish"
+    },
+    {
+      "id": 24,
+      "key": "FrostLance",
+      "name": "Lance givrée",
+      "world": 3,
+      "height": 8.75,
+      "radius": 1.91,
+      "finish": "chrome",
+      "aura": {
+        "color": "#5EC8FF",
+        "strength": 1.4
+      },
+      "stats": {
+        "multiplier": 240,
+        "cost": 260000000.0
+      },
+      "colors": {
+        "body": "#E8ECF2",
+        "accent": "#5EC8FF",
+        "nose": "#C9CED6",
+        "fins": "#C9CED6",
+        "window": "#5EC8FF",
+        "glow": "#5EC8FF",
+        "flame": "#5EC8FF"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#E8ECF2",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_1",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_2",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_3",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_4",
+          "tris": 16,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 16,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 16,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 16,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 16,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#5EC8FF",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        }
+      ],
+      "file": "Rocket_24_FrostLance"
+    },
+    {
+      "id": 25,
+      "key": "VioletViper",
+      "name": "Vipère violette",
+      "world": 3,
+      "height": 8.55,
+      "radius": 2.34,
+      "finish": "paint",
+      "aura": {
+        "color": "#FF6AD5",
+        "strength": 1.5
+      },
+      "stats": {
+        "multiplier": 300,
+        "cost": 500000000.0
+      },
+      "colors": {
+        "body": "#7A2BD6",
+        "accent": "#C9CED6",
+        "nose": "#C9CED6",
+        "fins": "#5A1FA3",
+        "window": "#FF6AD5",
+        "glow": "#FF6AD5",
+        "flame": "#FF6AD5"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#7A2BD6",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Cockpit",
+          "tris": 528,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#5A1FA3",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#5A1FA3",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#5A1FA3",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_25_VioletViper"
+    },
+    {
+      "id": 26,
+      "key": "GoldSaucer",
+      "name": "Soucoupe dorée",
+      "world": 3,
+      "height": 3.55,
+      "radius": 3.69,
+      "finish": "chrome",
+      "aura": {
+        "color": "#9BE8FF",
+        "strength": 1.6
+      },
+      "stats": {
+        "multiplier": 380,
+        "cost": 900000000.0
+      },
+      "colors": {
+        "body": "#D9A520",
+        "accent": "#F1C85A",
+        "nose": "#D9A520",
+        "window": "#9BE8FF",
+        "glow": "#9BE8FF",
+        "flame": "#9BE8FF",
+        "metal": "#8A6A1A"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 188,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Dome",
+          "tris": 574,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_2",
+          "tris": 62,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_3",
+          "tris": 62,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 510,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_2",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_3",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Saucer",
+          "tris": 316,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "SaucerGlow",
+          "tris": 960,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_1",
+          "tris": 80,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_2",
+          "tris": 80,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_3",
+          "tris": 80,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_4",
+          "tris": 80,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_5",
+          "tris": 80,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_6",
+          "tris": 80,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_7",
+          "tris": 80,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_8",
+          "tris": 80,
+          "color": "#9BE8FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        }
+      ],
+      "file": "Rocket_26_GoldSaucer"
+    },
+    {
+      "id": 27,
+      "key": "CrimsonTrio",
+      "name": "Trio cramoisi",
+      "world": 3,
+      "height": 7.35,
+      "radius": 1.84,
+      "finish": "paint",
+      "aura": {
+        "color": "#FFB04A",
+        "strength": 1.6
+      },
+      "stats": {
+        "multiplier": 470,
+        "cost": 1700000000.0
+      },
+      "colors": {
+        "body": "#D62828",
+        "accent": "#F1C85A",
+        "nose": "#F1C85A",
+        "fins": "#F1C85A",
+        "window": "#FFD27A",
+        "glow": "#FFB04A",
+        "flame": "#FFB04A"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#D62828",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Booster_1",
+          "tris": 60,
+          "color": "#D62828",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Booster_2",
+          "tris": 60,
+          "color": "#D62828",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterFlame_1",
+          "tris": 46,
+          "color": "#FFB04A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterFlame_2",
+          "tris": 46,
+          "color": "#FFB04A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "BoosterNose_1",
+          "tris": 318,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNose_2",
+          "tris": 318,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_1",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "BoosterNozzle_2",
+          "tris": 60,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB04A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#FFD27A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_27_CrimsonTrio"
+    },
+    {
+      "id": 28,
+      "key": "ScarletSpear",
+      "name": "Épieu écarlate",
+      "world": 3,
+      "height": 9.15,
+      "radius": 1.88,
+      "finish": "chrome",
+      "aura": {
+        "color": "#FF4D4D",
+        "strength": 1.7
+      },
+      "stats": {
+        "multiplier": 600,
+        "cost": 3200000000.0
+      },
+      "colors": {
+        "body": "#D62828",
+        "accent": "#C9CED6",
+        "nose": "#C9CED6",
+        "fins": "#C9CED6",
+        "window": "#FFD27A",
+        "glow": "#FF4D4D",
+        "flame": "#FF4D4D"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#D62828",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Band_2",
+          "tris": 124,
+          "color": "#FF4D4D",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#D62828",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#FF4D4D",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#FF4D4D",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 12,
+          "color": "#FF4D4D",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 12,
+          "color": "#FF4D4D",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF4D4D",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#FFD27A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        }
+      ],
+      "file": "Rocket_28_ScarletSpear"
+    },
+    {
+      "id": 29,
+      "key": "GoldenHawk",
+      "name": "Faucon doré",
+      "world": 3,
+      "height": 8.35,
+      "radius": 3.32,
+      "finish": "paint",
+      "aura": {
+        "color": "#FFB04A",
+        "strength": 1.8
+      },
+      "stats": {
+        "multiplier": 750,
+        "cost": 6000000000.0
+      },
+      "colors": {
+        "body": "#D62828",
+        "accent": "#F1C85A",
+        "nose": "#F1C85A",
+        "fins": "#F1C85A",
+        "window": "#FFD27A",
+        "glow": "#FFB04A",
+        "flame": "#FFB04A"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#D62828",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Cockpit",
+          "tris": 528,
+          "color": "#FFD27A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#FFB04A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#FFB04A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFB04A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 638,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Spike_1",
+          "tris": 14,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Spike_2",
+          "tris": 14,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_29_GoldenHawk"
+    },
+    {
+      "id": 30,
+      "key": "AureateHalo",
+      "name": "Halo auréolé",
+      "world": 3,
+      "height": 8.15,
+      "radius": 3.0,
+      "finish": "chrome",
+      "aura": {
+        "color": "#FFD35A",
+        "strength": 2.0
+      },
+      "stats": {
+        "multiplier": 950,
+        "cost": 12000000000.0
+      },
+      "colors": {
+        "body": "#F1C85A",
+        "accent": "#D9A520",
+        "nose": "#D9A520",
+        "fins": "#D9A520",
+        "window": "#FFD27A",
+        "glow": "#FFD35A",
+        "flame": "#FFD35A"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_1",
+          "tris": 16,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_2",
+          "tris": 16,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_3",
+          "tris": 16,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 16,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 16,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 16,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Halo_1",
+          "tris": 960,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Halo_2",
+          "tris": 960,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#FFD27A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        }
+      ],
+      "file": "Rocket_30_AureateHalo"
+    },
+    {
+      "id": 31,
+      "key": "ShadowStriker",
+      "name": "Frappeur d'ombre",
+      "world": 4,
+      "height": 8.8,
+      "radius": 2.05,
+      "finish": "matte",
+      "aura": {
+        "color": "#FF2FA8",
+        "strength": 2.1
+      },
+      "stats": {
+        "multiplier": 1300,
+        "cost": 25000000000.0
+      },
+      "colors": {
+        "body": "#15161C",
+        "accent": "#FF2FA8",
+        "nose": "#2A2C36",
+        "fins": "#2A2C36",
+        "window": "#FF2FA8",
+        "glow": "#FF2FA8",
+        "flame": "#FF2FA8"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FF2FA8",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Band_2",
+          "tris": 124,
+          "color": "#FF2FA8",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#15161C",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        },
+        {
+          "name": "Fin_1",
+          "tris": 16,
+          "color": "#2A2C36",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        },
+        {
+          "name": "Fin_2",
+          "tris": 16,
+          "color": "#2A2C36",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        },
+        {
+          "name": "Fin_3",
+          "tris": 16,
+          "color": "#2A2C36",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        },
+        {
+          "name": "Fin_4",
+          "tris": 16,
+          "color": "#2A2C36",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 16,
+          "color": "#FF2FA8",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 16,
+          "color": "#FF2FA8",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 16,
+          "color": "#FF2FA8",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 16,
+          "color": "#FF2FA8",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF2FA8",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#2A2C36",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#FF2FA8",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FF2FA8",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        }
+      ],
+      "file": "Rocket_31_ShadowStriker"
+    },
+    {
+      "id": 32,
+      "key": "VoidSaucer",
+      "name": "Soucoupe du vide",
+      "world": 4,
+      "height": 3.55,
+      "radius": 3.83,
+      "finish": "matte",
+      "aura": {
+        "color": "#5EF2FF",
+        "strength": 2.2
+      },
+      "stats": {
+        "multiplier": 1700,
+        "cost": 50000000000.0
+      },
+      "colors": {
+        "body": "#15161C",
+        "accent": "#1F2230",
+        "nose": "#15161C",
+        "window": "#5EF2FF",
+        "glow": "#5EF2FF",
+        "flame": "#5EF2FF",
+        "metal": "#2A2C36"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 188,
+          "color": "#15161C",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        },
+        {
+          "name": "Dome",
+          "tris": 574,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_2",
+          "tris": 62,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_3",
+          "tris": 62,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 510,
+          "color": "#15161C",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_2",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_3",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Saucer",
+          "tris": 316,
+          "color": "#1F2230",
+          "glow": false,
+          "metallic": 0.0,
+          "roughness": 0.7
+        },
+        {
+          "name": "SaucerGlow",
+          "tris": 960,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_1",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_10",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_2",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_3",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_4",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_5",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_6",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_7",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_8",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "SaucerLight_9",
+          "tris": 80,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        }
+      ],
+      "file": "Rocket_32_VoidSaucer"
+    },
+    {
+      "id": 33,
+      "key": "AmethystShard",
+      "name": "Éclat d'améthyste",
+      "world": 4,
+      "height": 8.6,
+      "radius": 2.14,
+      "finish": "crystal",
+      "aura": {
+        "color": "#FF6AD5",
+        "strength": 2.3
+      },
+      "stats": {
+        "multiplier": 2200,
+        "cost": 100000000000.0
+      },
+      "colors": {
+        "body": "#A23BFF",
+        "accent": "#FF6AD5",
+        "nose": "#C77DFF",
+        "fins": "#7A2BD6",
+        "window": "#FF6AD5",
+        "glow": "#FF6AD5",
+        "flame": "#FF6AD5",
+        "nozzle": "#2A2C36"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 44,
+          "color": "#A23BFF",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#7A2BD6",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#7A2BD6",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#7A2BD6",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#7A2BD6",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 30,
+          "color": "#C77DFF",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 44,
+          "color": "#2A2C36",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Spike_1",
+          "tris": 14,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Spike_2",
+          "tris": 14,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Spike_3",
+          "tris": 14,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Spike_4",
+          "tris": 14,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        }
+      ],
+      "file": "Rocket_33_AmethystShard"
+    },
+    {
+      "id": 34,
+      "key": "ObsidianFang",
+      "name": "Croc d'obsidienne",
+      "world": 4,
+      "height": 9.0,
+      "radius": 1.5,
+      "finish": "crystal",
+      "aura": {
+        "color": "#A23BFF",
+        "strength": 2.3
+      },
+      "stats": {
+        "multiplier": 2900,
+        "cost": 200000000000.0
+      },
+      "colors": {
+        "body": "#1A1026",
+        "accent": "#A23BFF",
+        "nose": "#2A1840",
+        "fins": "#2A1840",
+        "window": "#A23BFF",
+        "glow": "#A23BFF",
+        "flame": "#A23BFF",
+        "nozzle": "#2A2C36"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 20,
+          "color": "#A23BFF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Body",
+          "tris": 32,
+          "color": "#1A1026",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#2A1840",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#2A1840",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#2A1840",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#A23BFF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#A23BFF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 12,
+          "color": "#A23BFF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#A23BFF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 22,
+          "color": "#2A1840",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 32,
+          "color": "#2A2C36",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_34_ObsidianFang"
+    },
+    {
+      "id": 35,
+      "key": "CyanHalo",
+      "name": "Halo cyan",
+      "world": 4,
+      "height": 9.0,
+      "radius": 3.26,
+      "finish": "chrome",
+      "aura": {
+        "color": "#5EF2FF",
+        "strength": 2.4
+      },
+      "stats": {
+        "multiplier": 3800,
+        "cost": 400000000000.0
+      },
+      "colors": {
+        "body": "#F4F4F4",
+        "accent": "#5EF2FF",
+        "nose": "#C9CED6",
+        "fins": "#C9CED6",
+        "window": "#5EF2FF",
+        "glow": "#5EF2FF",
+        "flame": "#5EF2FF"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 12,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 12,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Halo_1",
+          "tris": 960,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#C9CED6",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#5EF2FF",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        }
+      ],
+      "file": "Rocket_35_CyanHalo"
+    },
+    {
+      "id": 36,
+      "key": "InfernoFighter",
+      "name": "Chasseur infernal",
+      "world": 4,
+      "height": 8.8,
+      "radius": 3.58,
+      "finish": "paint",
+      "aura": {
+        "color": "#FF8A1F",
+        "strength": 2.5
+      },
+      "stats": {
+        "multiplier": 5000,
+        "cost": 800000000000.0
+      },
+      "colors": {
+        "body": "#D62828",
+        "accent": "#FF8A1F",
+        "nose": "#FF8A1F",
+        "fins": "#B51E1E",
+        "window": "#FFD27A",
+        "glow": "#FF8A1F",
+        "flame": "#FF8A1F"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FF8A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#D62828",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Cockpit",
+          "tris": 528,
+          "color": "#FFD27A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#B51E1E",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#B51E1E",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#FF8A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#FF8A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF8A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#FF8A1F",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Spike_1",
+          "tris": 14,
+          "color": "#FF8A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Spike_2",
+          "tris": 14,
+          "color": "#FF8A1F",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        }
+      ],
+      "file": "Rocket_36_InfernoFighter"
+    },
+    {
+      "id": 37,
+      "key": "SolarCrown",
+      "name": "Couronne solaire",
+      "world": 4,
+      "height": 8.6,
+      "radius": 3.14,
+      "finish": "chrome",
+      "aura": {
+        "color": "#FFD35A",
+        "strength": 2.6
+      },
+      "stats": {
+        "multiplier": 6500,
+        "cost": 1600000000000.0
+      },
+      "colors": {
+        "body": "#F1C85A",
+        "accent": "#FFD35A",
+        "nose": "#D9A520",
+        "fins": "#D9A520",
+        "window": "#FFD27A",
+        "glow": "#FFD35A",
+        "flame": "#FFD35A"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 124,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_1",
+          "tris": 16,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_2",
+          "tris": 16,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_3",
+          "tris": 16,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_4",
+          "tris": 16,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 16,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 16,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 16,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 16,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Halo_1",
+          "tris": 960,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Halo_2",
+          "tris": 960,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#D9A520",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#FFD27A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#FFD35A",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        }
+      ],
+      "file": "Rocket_37_SolarCrown"
+    },
+    {
+      "id": 38,
+      "key": "GlacierCrystal",
+      "name": "Cristal glacier",
+      "world": 4,
+      "height": 8.8,
+      "radius": 2.11,
+      "finish": "crystal",
+      "aura": {
+        "color": "#5EF2FF",
+        "strength": 2.7
+      },
+      "stats": {
+        "multiplier": 8500,
+        "cost": 3200000000000.0
+      },
+      "colors": {
+        "body": "#2F7BFF",
+        "accent": "#5EF2FF",
+        "nose": "#8FE3FF",
+        "fins": "#1E4FCC",
+        "window": "#5EF2FF",
+        "glow": "#5EF2FF",
+        "flame": "#5EF2FF",
+        "nozzle": "#2A2C36"
+      },
+      "parts": [
+        {
+          "name": "Body",
+          "tris": 44,
+          "color": "#2F7BFF",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#1E4FCC",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#1E4FCC",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#1E4FCC",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#1E4FCC",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 12,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 12,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Nose",
+          "tris": 30,
+          "color": "#8FE3FF",
+          "glow": false,
+          "metallic": 0.3,
+          "roughness": 0.15
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 44,
+          "color": "#2A2C36",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Spike_1",
+          "tris": 14,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Spike_2",
+          "tris": 14,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Spike_3",
+          "tris": 14,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Spike_4",
+          "tris": 14,
+          "color": "#5EF2FF",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        }
+      ],
+      "file": "Rocket_38_GlacierCrystal"
+    },
+    {
+      "id": 39,
+      "key": "NebulaLance",
+      "name": "Lance nébuleuse",
+      "world": 4,
+      "height": 9.4,
+      "radius": 2.69,
+      "finish": "paint",
+      "aura": {
+        "color": "#FF6AD5",
+        "strength": 2.8
+      },
+      "stats": {
+        "multiplier": 11000,
+        "cost": 6500000000000.0
+      },
+      "colors": {
+        "body": "#7A2BD6",
+        "accent": "#F4F4F4",
+        "nose": "#F4F4F4",
+        "fins": "#F4F4F4",
+        "window": "#FF6AD5",
+        "glow": "#FF6AD5",
+        "flame": "#FF6AD5"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Band_2",
+          "tris": 124,
+          "color": "#7A2BD6",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#7A2BD6",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_3",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Fin_4",
+          "tris": 12,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_3",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_4",
+          "tris": 12,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Halo_1",
+          "tris": 960,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Window_1",
+          "tris": 76,
+          "color": "#FF6AD5",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "WindowFrame_1",
+          "tris": 76,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 0.15,
+          "roughness": 0.4
+        }
+      ],
+      "file": "Rocket_39_NebulaLance"
+    },
+    {
+      "id": 40,
+      "key": "UltimateLegend",
+      "name": "Légende ultime",
+      "world": 4,
+      "height": 9.65,
+      "radius": 3.89,
+      "finish": "chrome",
+      "aura": {
+        "color": "#FFD35A",
+        "strength": 3.0
+      },
+      "stats": {
+        "multiplier": 15000,
+        "cost": 15000000000000.0
+      },
+      "colors": {
+        "body": "#F4F4F4",
+        "accent": "#F1C85A",
+        "nose": "#F1C85A",
+        "fins": "#F1C85A",
+        "window": "#FFD27A",
+        "glow": "#FFD35A",
+        "flame": "#FFD35A"
+      },
+      "parts": [
+        {
+          "name": "Band_1",
+          "tris": 124,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Body",
+          "tris": 572,
+          "color": "#F4F4F4",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Cockpit",
+          "tris": 528,
+          "color": "#FFD27A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Fin_1",
+          "tris": 12,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Fin_2",
+          "tris": 12,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "FinGlow_1",
+          "tris": 12,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "FinGlow_2",
+          "tris": 12,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Flame_1",
+          "tris": 62,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_2",
+          "tris": 62,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Flame_3",
+          "tris": 62,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.5
+        },
+        {
+          "name": "Halo_1",
+          "tris": 960,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Halo_2",
+          "tris": 960,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Nose",
+          "tris": 126,
+          "color": "#F1C85A",
+          "glow": false,
+          "metallic": 1.0,
+          "roughness": 0.12
+        },
+        {
+          "name": "Nozzle_1",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_2",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Nozzle_3",
+          "tris": 188,
+          "color": "#3A3A3A",
+          "glow": false,
+          "metallic": 0.9,
+          "roughness": 0.4
+        },
+        {
+          "name": "Spike_1",
+          "tris": 14,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        },
+        {
+          "name": "Spike_2",
+          "tris": 14,
+          "color": "#FFD35A",
+          "glow": true,
+          "metallic": 0.0,
+          "roughness": 0.3
+        }
+      ],
+      "file": "Rocket_40_UltimateLegend"
+    }
+  ]
+}
