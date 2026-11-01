@@ -482,3 +482,40 @@ if __name__ == "__main__":
         os.path.join(HERE, "..", "..", "assets", "rockets", "catalog.json"),
         os.path.join(HERE, "AutoImportRockets.studio.luau"),
     )
+
+
+# ---------------------------------------------------------------------------
+# Version plugin Studio : même logique, déclenchée par un bouton de barre d'outils.
+# S'installe en copiant le fichier dans le dossier Plugins local de Studio
+# (Windows : %LOCALAPPDATA%\Roblox\Plugins ; Mac : ~/Documents/Roblox/Plugins).
+# ---------------------------------------------------------------------------
+
+def write_plugin(catalog_path, out_path):
+    with open(catalog_path, encoding="utf-8") as f:
+        cat = json.load(f)
+    body = AUTO_IMPORT_TEMPLATE.replace("__CATALOG__", catalog_as_lua(cat))
+    # Isole le corps dans une fonction run() ; la config et le catalogue restent globaux au plugin.
+    marker = 'local ReplicatedStorage = game:GetService("ReplicatedStorage")'
+    head, tail = body.split(marker, 1)
+    tail = marker + tail
+    tail = "\n".join("\t" + ln if ln.strip() else ln for ln in tail.splitlines())
+    plugin = (
+        head
+        + "local RunService = game:GetService(\"RunService\")\n"
+        + "if RunService:IsRunning() then\n\treturn\nend\n\n"
+        + "local function run()\n" + tail + "\nend\n\n"
+        + "local toolbar = plugin:CreateToolbar(\"Fusées\")\n"
+        + "local button = toolbar:CreateButton(\"Importer les 40 fusées\", \"Importe les FBX et applique couleurs et auras\", \"rbxassetid://4458901886\")\n"
+        + "button.ClickableWhenViewportHidden = true\n"
+        + "button.Click:Connect(function()\n\tprint(\"[Fusées] import en cours…\")\n\tlocal ok, err = pcall(run)\n\tif not ok then\n\t\twarn(\"[Fusées] \" .. tostring(err))\n\tend\nend)\n"
+    )
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(plugin)
+    print(f"{out_path} écrit")
+
+
+if __name__ == "__main__":
+    write_plugin(
+        os.path.join(HERE, "..", "..", "assets", "rockets", "catalog.json"),
+        os.path.join(HERE, "RocketImporterPlugin.lua"),
+    )
