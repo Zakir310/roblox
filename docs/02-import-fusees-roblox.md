@@ -1,7 +1,7 @@
 # Importer les 40 fusées dans Roblox Studio
 
 Les fusées sont générées par un script Blender (`tools/rockets/`) et exportées dans `assets/rockets/`.
-Chaque fusée est un fichier FBX (et OBJ) composé de plusieurs pièces nommées `RXX_Body`, `RXX_Nose`,
+Chaque fusée est un fichier FBX (et OBJ) composé de plusieurs pièces nommées `RXX_Body`, `RXX_Nozzle`,
 `RXX_Fin_1`… Roblox importe chaque pièce comme un **MeshPart** séparé, ce qui permet de la colorer et de
 mettre les parties lumineuses en **Neon**.
 
@@ -92,3 +92,23 @@ Le script Blender tourne avec le module `bpy` (`pip install bpy`) ou dans Blende
 - Les fusées de cristal (33, 34, 38) sont volontairement à facettes (6 à 8 côtés).
 - 31 `Highlight` maximum actifs en même temps : seules les fusées du monde 4 en reçoivent un.
   Si tu affiches beaucoup de fusées à la fois (index, boutique), remplace le Highlight par le PointLight seul.
+
+## 7. Fusées v2 (style métal cartoon)
+
+Les 40 fusées ont été entièrement redessinées : une silhouette unique par fusée (pétard, cornet glacé, navette,
+méduse, dragon, trou noir…). Le générateur est `tools/rockets/designs_v2.py` (une fonction par fusée) avec le kit
+`tools/rockets/rocketlib2.py`, et `tools/rockets/build_rockets_v2.py` exporte et rend le tout.
+
+Chaque pièce porte un type, converti en matériau Roblox par les scripts d'import :
+
+| Type | Matériau Roblox |
+|---|---|
+| metal | SmoothPlastic, Reflectance 0,22 (métal cartoon brillant) |
+| paint | SmoothPlastic, Reflectance 0,06 |
+| matte | SmoothPlastic |
+| wood | Wood |
+| dark | Metal |
+| glass | Glass, transparence 0,25 |
+| glow | Neon |
+
+Les flammes ne font plus partie des modèles : le feu du décollage est un effet (VFX) géré par le jeu.

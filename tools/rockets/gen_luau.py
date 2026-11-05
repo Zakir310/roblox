@@ -1,230 +1,65 @@
 """
-gen_luau.py — génère src/shared/Config/Rockets.luau à partir de assets/rockets/catalog.json.
-
-Usage : python gen_luau.py [--catalog ../../assets/rockets/catalog.json] [--out ../../src/shared/Config/Rockets.luau]
+gen_luau.py — génère, depuis assets/rockets/catalog.json (fusées v2) :
+  src/shared/Config/Rockets.luau                  catalogue typé (ModuleScript)
+  tools/rockets/ApplyRockets.studio.luau          applique couleurs/matériaux/auras à des modèles déjà importés
+  tools/rockets/AutoImportRockets.studio.luau     importe les FBX (AssetImportService) puis applique (barre de commande)
+  tools/rockets/RocketImporterPlugin.lua          même chose en plugin Studio (bouton)
 """
 
-import argparse
 import json
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 
 
-def hex_to_rgb255(h):
+def rgb(h):
     h = h.lstrip("#")
     return tuple(int(h[i : i + 2], 16) for i in (0, 2, 4))
 
 
-def lua_color(h):
-    r, g, b = hex_to_rgb255(h)
+def c3(h):
+    r, g, b = rgb(h)
     return f"Color3.fromRGB({r}, {g}, {b})"
 
 
-def lua_str(s):
-    return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
+def s(x):
+    return '"' + str(x).replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
-def fmt_num(x):
+def num(x):
     if isinstance(x, float) and x.is_integer():
-        x = int(x)
-    if isinstance(x, int):
-        return str(x)
+        return str(int(x))
     return repr(x)
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--catalog", default=os.path.join(HERE, "..", "..", "assets", "rockets", "catalog.json"))
-    ap.add_argument("--out", default=os.path.join(HERE, "..", "..", "src", "shared", "Config", "Rockets.luau"))
-    args = ap.parse_args()
-
-    with open(args.catalog, encoding="utf-8") as f:
-        cat = json.load(f)
-
-    lines = []
-    w = lines.append
-    w("--!strict")
-    w("-- Rockets.luau — catalogue des 40 fusées (GÉNÉRÉ par tools/rockets/gen_luau.py, ne pas éditer à la main).")
-    w("-- Chaque fusée : identité, monde, stats d'équilibrage, couleur de chaque pièce (nom = nom de l'objet")
-    w("-- dans le FBX, sans le préfixe RXX_), pièces lumineuses (Neon) et paramètres d'aura.")
-    w("")
-    w("export type RocketPart = {")
-    w("\tname: string,")
-    w("\tcolor: Color3,")
-    w("\tglow: boolean,")
-    w("\tmetallic: number,")
-    w("\troughness: number,")
-    w("}")
-    w("")
-    w("export type RocketAura = {")
-    w("\tcolor: Color3,")
-    w("\tstrength: number, -- 0.3 (faible) → 3.0 (légendaire)")
-    w("}")
-    w("")
-    w("export type RocketDef = {")
-    w("\tid: number,")
-    w("\tkey: string,")
-    w("\tname: string,")
-    w("\tworld: number,")
-    w("\tfinish: string, -- paint | metal | chrome | wood | crystal | matte")
-    w("\theight: number, -- studs")
-    w("\tmultiplier: number, -- multiplicateur d'altitude")
-    w("\tcost: number, -- prix en Étoiles (Wins)")
-    w("\tfile: string, -- nom du fichier FBX/OBJ dans assets/rockets")
-    w("\taura: RocketAura,")
-    w("\tparts: { RocketPart },")
-    w("}")
-    w("")
-    w("export type WorldDef = {")
-    w("\tid: number,")
-    w("\tname: string,")
-    w("\tsubtitle: string,")
-    w("\tcolor: Color3,")
-    w("}")
-    w("")
-    w("local Rockets = {}")
-    w("")
-    w("Rockets.Worlds: { WorldDef } = {")
-    for wid, wd in sorted(cat["worlds"].items(), key=lambda kv: int(kv[0])):
-        w(f"\t{{ id = {wid}, name = {lua_str(wd['name'])}, subtitle = {lua_str(wd['subtitle'])}, color = {lua_color(wd['color'])} }},")
-    w("}")
-    w("")
-    w("Rockets.List: { RocketDef } = {")
+def catalog_lua(cat, indent=""):
+    out = [f"{indent}{{"]
     for r in cat["rockets"]:
-        w("\t{")
-        w(f"\t\tid = {r['id']},")
-        w(f"\t\tkey = {lua_str(r['key'])},")
-        w(f"\t\tname = {lua_str(r['name'])},")
-        w(f"\t\tworld = {r['world']},")
-        w(f"\t\tfinish = {lua_str(r['finish'])},")
-        w(f"\t\theight = {fmt_num(r['height'])},")
-        w(f"\t\tmultiplier = {fmt_num(r['stats']['multiplier'])},")
-        w(f"\t\tcost = {fmt_num(r['stats']['cost'])},")
-        w(f"\t\tfile = {lua_str(r['file'])},")
-        w(f"\t\taura = {{ color = {lua_color(r['aura']['color'])}, strength = {fmt_num(r['aura']['strength'])} }},")
-        w("\t\tparts = {")
+        out.append(f"{indent}\t{{ id = {r['id']}, key = {s(r['key'])}, name = {s(r['name'])}, world = {r['world']}, "
+                   f"height = {num(r['height'])}, multiplier = {num(r['stats']['multiplier'])}, cost = {num(r['stats']['cost'])}, file = {s(r['file'])},")
+        out.append(f"{indent}\t\taura = {{ color = {c3(r['aura']['color'])}, strength = {num(r['aura']['strength'])} }},")
+        out.append(f"{indent}\t\tparts = {{")
         for p in r["parts"]:
-            w(f"\t\t\t{{ name = {lua_str(p['name'])}, color = {lua_color(p['color'])}, glow = {'true' if p['glow'] else 'false'}, metallic = {fmt_num(p['metallic'])}, roughness = {fmt_num(p['roughness'])} }},")
-        w("\t\t},")
-        w("\t},")
-    w("}")
-    w("")
-    w("Rockets.ById: { [number]: RocketDef } = {}")
-    w("Rockets.ByKey: { [string]: RocketDef } = {}")
-    w("for _, def in Rockets.List do")
-    w("\tRockets.ById[def.id] = def")
-    w("\tRockets.ByKey[def.key] = def")
-    w("end")
-    w("")
-    w("function Rockets.get(id: number): RocketDef?")
-    w("\treturn Rockets.ById[id]")
-    w("end")
-    w("")
-    w("function Rockets.forWorld(world: number): { RocketDef }")
-    w("\tlocal out = {}")
-    w("\tfor _, def in Rockets.List do")
-    w("\t\tif def.world == world then")
-    w("\t\t\ttable.insert(out, def)")
-    w("\t\tend")
-    w("\tend")
-    w("\treturn out")
-    w("end")
-    w("")
-    w("return Rockets")
-
-    os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
-    with open(args.out, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines) + "\n")
-    print(f"{args.out} écrit ({len(cat['rockets'])} fusées)")
-
-
-if __name__ == "__main__":
-    main()
-
-
-# ---------------------------------------------------------------------------
-# Script autonome pour la barre de commande : importe les FBX via AssetImportService,
-# puis applique couleurs, matériaux et auras (catalogue embarqué, aucun module requis).
-# ---------------------------------------------------------------------------
-
-def catalog_as_lua(cat):
-    out = []
-    w = out.append
-    w("local CATALOG = {")
-    for r in cat["rockets"]:
-        w(f"\t[{r['id']}] = {{ id = {r['id']}, key = {lua_str(r['key'])}, name = {lua_str(r['name'])}, world = {r['world']}, finish = {lua_str(r['finish'])}, multiplier = {fmt_num(r['stats']['multiplier'])}, file = {lua_str(r['file'])},")
-        w(f"\t\taura = {{ color = {lua_color(r['aura']['color'])}, strength = {fmt_num(r['aura']['strength'])} }},")
-        w("\t\tparts = {")
-        for p in r["parts"]:
-            w(f"\t\t\t{{ name = {lua_str(p['name'])}, color = {lua_color(p['color'])}, glow = {'true' if p['glow'] else 'false'}, metallic = {fmt_num(p['metallic'])} }},")
-        w("\t\t} },")
-    w("}")
+            out.append(f"{indent}\t\t\t{{ name = {s(p['name'])}, color = {c3(p['color'])}, kind = {s(p['kind'])} }},")
+        out.append(f"{indent}\t\t}},")
+        out.append(f"{indent}\t}},")
+    out.append(f"{indent}}}")
     return "\n".join(out)
 
 
-AUTO_IMPORT_TEMPLATE = r'''--[[
-	AutoImportRockets.studio.luau — importe les 40 fusées dans Roblox Studio SANS passer par la fenêtre Import 3D.
-
-	1. Télécharge le dépôt (GitHub → Code → Download ZIP) et décompresse-le.
-	2. Modifie la ligne FBX_FOLDER ci-dessous avec le chemin du dossier assets/rockets/fbx sur TON ordinateur.
-	3. Ouvre ton place dans Studio, View → Command Bar, colle TOUT ce script, Entrée.
-
-	Le script importe chaque FBX avec l'importeur 3D de Studio (les meshes sont envoyés sur ton compte comme
-	avec un import manuel), colore chaque pièce, met les parties lumineuses en Neon, ajoute l'aura et range
-	les fusées dans ReplicatedStorage.Assets.Rockets. Les fusées déjà présentes sont ignorées.
-	Si l'import automatique échoue sur ta version de Studio, le script te le dit : utilise alors Import 3D
-	puis le script ApplyRockets.studio.luau.
-]]
-
--- >>> À MODIFIER : dossier contenant les .fbx (garde les doubles crochets) <<<
-local FBX_FOLDER = [[C:\Users\TonNom\Downloads\roblox-master\assets\rockets\fbx]]
-
--- Mets à false pour n'importer que certaines fusées, ex. ONLY = { 1, 2, 3 }
-local ONLY: { number }? = nil
-
-__CATALOG__
-
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Workspace = game:GetService("Workspace")
-local AssetImportService = game:GetService("AssetImportService")
-
-local sep = FBX_FOLDER:find("\\") and "\\" or "/"
-if FBX_FOLDER:sub(-1) ~= sep then
-	FBX_FOLDER ..= sep
-end
-
-local assets = ReplicatedStorage:FindFirstChild("Assets") or Instance.new("Folder")
-assets.Name = "Assets"
-assets.Parent = ReplicatedStorage
-local targetFolder = assets:FindFirstChild("Rockets") or Instance.new("Folder")
-targetFolder.Name = "Rockets"
-targetFolder.Parent = assets
-
-local importFolder = Workspace:FindFirstChild("RocketsImport") or Instance.new("Folder")
-importFolder.Name = "RocketsImport"
-importFolder.Parent = Workspace
-
-local function materialFor(def, part): Enum.Material
-	if part.glow then
-		return Enum.Material.Neon
-	end
-	local name = part.name
-	if name:match("^Nozzle") or name:match("^BoosterNozzle") or name:match("^Leg") or name:match("^Arm") or name:match("^Antenna") or name:match("^DishMast") then
-		return Enum.Material.Metal
-	end
-	if name:match("^Window") or name:match("^Cockpit") or name:match("^Dome") or name:match("^Panel_") then
-		return Enum.Material.Glass
-	end
-	if def.finish == "chrome" or def.finish == "metal" or part.metallic >= 0.6 then
-		return Enum.Material.Metal
-	elseif def.finish == "wood" then
-		return Enum.Material.Wood
-	elseif def.finish == "crystal" then
-		return Enum.Material.Glass
-	end
-	return Enum.Material.SmoothPlastic
-end
+# Corps commun : applique un catalogue à un modèle importé (pièces nommées RXX_<Piece>)
+APPLY_LIB = r'''
+-- Style « métal cartoon » : chaque type de pièce → matériau Roblox
+local KIND_STYLE = {
+	metal = { material = Enum.Material.SmoothPlastic, reflectance = 0.22 },
+	paint = { material = Enum.Material.SmoothPlastic, reflectance = 0.06 },
+	matte = { material = Enum.Material.SmoothPlastic, reflectance = 0 },
+	wood = { material = Enum.Material.Wood, reflectance = 0 },
+	dark = { material = Enum.Material.Metal, reflectance = 0.05 },
+	glass = { material = Enum.Material.Glass, reflectance = 0.1, transparency = 0.25 },
+	glow = { material = Enum.Material.Neon, reflectance = 0 },
+}
 
 local function parsePartName(instanceName: string): (number?, string?)
 	local idStr, partName = instanceName:match("^R(%d%d)_(.+)$")
@@ -234,14 +69,26 @@ local function parsePartName(instanceName: string): (number?, string?)
 	return nil, nil
 end
 
+local function rocketIdOf(model: Instance): number?
+	for _, inst in model:GetDescendants() do
+		if inst:IsA("BasePart") then
+			local id = parsePartName(inst.Name)
+			if id then
+				return id
+			end
+		end
+	end
+	return nil
+end
+
 local function addAura(model: Model, body: BasePart, def)
 	local aura = def.aura
 	local strength = aura.strength
 	local light = Instance.new("PointLight")
 	light.Name = "AuraLight"
 	light.Color = aura.color
-	light.Brightness = 0.6 + strength * 0.8
-	light.Range = 8 + strength * 5
+	light.Brightness = 0.6 + strength * 0.7
+	light.Range = 8 + strength * 4
 	light.Shadows = false
 	light.Parent = body
 
@@ -259,7 +106,7 @@ local function addAura(model: Model, body: BasePart, def)
 	emitter.Size = NumberSequence.new({ NumberSequenceKeypoint.new(0, 0.15 + 0.1 * strength), NumberSequenceKeypoint.new(1, 0) })
 	emitter.Transparency = NumberSequence.new({ NumberSequenceKeypoint.new(0, 0.2), NumberSequenceKeypoint.new(1, 1) })
 	emitter.Lifetime = NumberRange.new(1.0, 1.8)
-	emitter.Rate = 6 + 10 * strength
+	emitter.Rate = 4 + 8 * strength
 	emitter.Speed = NumberRange.new(2, 4)
 	emitter.SpreadAngle = Vector2.new(25, 25)
 	emitter.EmissionDirection = Enum.NormalId.Top
@@ -271,22 +118,22 @@ local function addAura(model: Model, body: BasePart, def)
 	if def.world >= 4 then
 		local highlight = Instance.new("Highlight")
 		highlight.Name = "AuraHighlight"
-		highlight.FillColor = aura.color
-		highlight.FillTransparency = 0.9
+		highlight.FillTransparency = 1
 		highlight.OutlineColor = aura.color
-		highlight.OutlineTransparency = 0.3
+		highlight.OutlineTransparency = 0.2
 		highlight.DepthMode = Enum.HighlightDepthMode.Occluded
 		highlight.Parent = model
 	end
 end
 
--- Applique couleurs/matériaux/aura à un modèle importé. Renvoie true si OK.
-local function applyToModel(model: Model, def): boolean
+-- Renvoie true si le modèle a été traité et rangé dans targetFolder.
+local function applyToModel(model: Model, def, targetFolder: Instance): boolean
 	local partsByName = {}
 	for _, p in def.parts do
 		partsByName[p.name] = p
 	end
 	local body: BasePart? = nil
+	local first: BasePart? = nil
 	for _, inst in model:GetDescendants() do
 		if not inst:IsA("BasePart") then
 			continue
@@ -300,28 +147,30 @@ local function applyToModel(model: Model, def): boolean
 			warn(("  pièce inconnue %s dans %s"):format(partName, def.key))
 			continue
 		end
+		local style = KIND_STYLE[pdef.kind] or KIND_STYLE.paint
 		inst.Name = partName
 		inst.Color = pdef.color
-		inst.Material = materialFor(def, pdef)
+		inst.Material = style.material
+		inst.Reflectance = style.reflectance
+		inst.Transparency = style.transparency or 0
 		inst.Anchored = true
 		inst.CanCollide = false
 		inst.CanTouch = false
 		inst.CanQuery = false
 		inst.Massless = true
-		inst.CastShadow = not pdef.glow
-		if inst.Material == Enum.Material.Glass then
-			inst.Transparency = 0.15
-		end
+		inst.CastShadow = pdef.kind ~= "glow" and pdef.kind ~= "glass"
 		local sa = inst:FindFirstChildOfClass("SurfaceAppearance")
 		if sa then
 			sa:Destroy()
 		end
+		first = first or inst
 		if partName == "Body" then
 			body = inst
 		end
 	end
+	body = body or first
 	if not body then
-		warn(("  %s : pas de pièce Body"):format(def.key))
+		warn(("  %s : aucune pièce reconnue"):format(def.key))
 		return false
 	end
 	model.PrimaryPart = body
@@ -343,7 +192,54 @@ local function applyToModel(model: Model, def): boolean
 	return true
 end
 
--- Règle les options de l'importeur sur tout l'arbre d'import (noms tolérants aux versions de Studio).
+local function rocketsFolder(): Folder
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local assets = ReplicatedStorage:FindFirstChild("Assets") or Instance.new("Folder")
+	assets.Name = "Assets"
+	assets.Parent = ReplicatedStorage
+	local f = assets:FindFirstChild("Rockets") or Instance.new("Folder")
+	f.Name = "Rockets"
+	f.Parent = assets
+	return f :: Folder
+end
+'''
+
+APPLY_SCRIPT = r'''--[[
+	ApplyRockets.studio.luau — (GÉNÉRÉ) après un import manuel avec Import 3D.
+	Mets les modèles importés dans workspace.RocketsImport, puis colle ce script dans View → Command Bar.
+	Il colore chaque pièce (style métal cartoon), soude, ajoute l'aura et range dans ReplicatedStorage.Assets.Rockets.
+]]
+__CATALOG__
+__LIB__
+local importFolder = workspace:FindFirstChild("RocketsImport")
+assert(importFolder, "Crée un dossier workspace.RocketsImport et mets-y les modèles importés.")
+local target = rocketsFolder()
+local done = 0
+for _, model in importFolder:GetChildren() do
+	if model:IsA("Model") then
+		local id = rocketIdOf(model)
+		local def = id and CATALOG[id]
+		if def then
+			local old = target:FindFirstChild(def.key)
+			if old then
+				old:Destroy()
+			end
+			if applyToModel(model, def, target) then
+				done += 1
+				print(("✔ %02d %s (%s)"):format(def.id, def.name, def.key))
+			end
+		else
+			warn(("Modèle %s ignoré : aucune pièce RXX_ reconnue"):format(model.Name))
+		end
+	end
+end
+print(("%d fusée(s) → ReplicatedStorage.Assets.Rockets"):format(done))
+'''
+
+AUTO_BODY = r'''
+local AssetImportService = game:GetService("AssetImportService")
+local Workspace = game:GetService("Workspace")
+
 local function configureSession(session)
 	local okTree, tree = pcall(function()
 		return session:GetImportTree()
@@ -370,13 +266,10 @@ local function configureSession(session)
 		trySet("UsePivotAsOrigin", true)
 		trySet("ImportAsModelAsset", false)
 		trySet("ImportOnlyAsModel", true)
-		trySet("WorldForward", Enum.NormalId.Back)
-		trySet("WorldUp", Enum.NormalId.Top)
 	end
 end
 
-local function importOne(def): Model?
-	local path = FBX_FOLDER .. def.file .. ".fbx"
+local function importOne(path: string): Model?
 	local ok, session = pcall(function()
 		return AssetImportService:StartSessionWithPath(path)
 	end)
@@ -385,14 +278,6 @@ local function importOne(def): Model?
 		return nil
 	end
 	configureSession(session)
-	local okStatus, statuses = pcall(function()
-		return session:GetStatuses()
-	end)
-	if okStatus and statuses and statuses.errors and #statuses.errors > 0 then
-		for _, e in statuses.errors do
-			warn("  erreur importeur : " .. tostring(e.statusType or e))
-		end
-	end
 	local before = {}
 	for _, c in Workspace:GetChildren() do
 		before[c] = true
@@ -404,7 +289,6 @@ local function importOne(def): Model?
 		warn("  Import() a échoué : " .. tostring(result))
 		return nil
 	end
-	-- Retrouve le modèle inséré (retour de Import() ou nouveau Model dans Workspace)
 	local candidates = {}
 	if typeof(result) == "table" then
 		for _, inst in result do
@@ -424,98 +308,114 @@ local function importOne(def): Model?
 		if c:IsA("Model") then
 			return c
 		end
-		if c:IsA("BasePart") then
-			-- certaines versions insèrent un Model sous une Folder
-			local m = c:FindFirstAncestorOfClass("Model")
-			if m then
-				return m
-			end
+		local m = c:IsA("BasePart") and c:FindFirstAncestorOfClass("Model")
+		if m then
+			return m
 		end
 	end
 	return nil
 end
 
-local done, failed = 0, {}
-for id = 1, 40 do
-	local def = CATALOG[id]
-	if ONLY and not table.find(ONLY, id) then
-		continue
+local function run()
+	local sep = FBX_FOLDER:find("\\") and "\\" or "/"
+	local folder = FBX_FOLDER
+	if folder:sub(-1) ~= sep then
+		folder ..= sep
 	end
-	if targetFolder:FindFirstChild(def.key) then
-		print(("= %02d %s déjà présent, ignoré"):format(id, def.key))
-		continue
-	end
-	print(("… import %02d %s"):format(id, def.name))
-	local model = importOne(def)
-	if model then
-		model.Parent = importFolder
-		if applyToModel(model, def) then
-			done += 1
-			print(("✔ %02d %s (%s)"):format(id, def.name, def.key))
+	local target = rocketsFolder()
+	local done, failed = 0, {}
+	for id = 1, 40 do
+		local def = CATALOG[id]
+		if ONLY and not table.find(ONLY, id) then
+			continue
+		end
+		local old = target:FindFirstChild(def.key)
+		if old and not REPLACE_EXISTING then
+			print(("= %02d %s déjà présent, ignoré"):format(id, def.key))
+			continue
+		end
+		print(("… import %02d %s"):format(id, def.name))
+		local model = importOne(folder .. def.file .. ".fbx")
+		if model then
+			if old then
+				old:Destroy()
+			end
+			if applyToModel(model, def, target) then
+				done += 1
+				print(("✔ %02d %s (%s)"):format(id, def.name, def.key))
+			else
+				table.insert(failed, id)
+			end
 		else
 			table.insert(failed, id)
 		end
-	else
-		table.insert(failed, id)
+		task.wait(0.2)
 	end
-	task.wait(0.2)
-end
-
-print(("%d fusée(s) importée(s) → ReplicatedStorage.Assets.Rockets"):format(done))
-if #failed > 0 then
-	warn("Échec pour : " .. table.concat(failed, ", ") .. ". Vérifie FBX_FOLDER, ou importe-les avec Import 3D puis ApplyRockets.studio.luau.")
+	print(("%d fusée(s) importée(s) → ReplicatedStorage.Assets.Rockets"):format(done))
+	if #failed > 0 then
+		warn("Échec pour : " .. table.concat(failed, ", ") .. ". Vérifie FBX_FOLDER, ou passe par Import 3D + ApplyRockets.studio.luau.")
+	end
 end
 '''
 
+AUTO_HEAD = r'''--[[
+	AutoImportRockets.studio.luau — (GÉNÉRÉ) importe les 40 fusées v2 sans la fenêtre Import 3D.
+	1. Télécharge le dépôt (GitHub → Code → Download ZIP) et décompresse-le.
+	2. Remplace FBX_FOLDER par le chemin de assets/rockets/fbx sur ton ordinateur.
+	3. Studio : View → Command Bar, colle tout, Entrée.
+	Les anciennes fusées du même nom dans ReplicatedStorage.Assets.Rockets sont remplacées (REPLACE_EXISTING).
+]]
 
-def write_auto_import(catalog_path, out_path):
-    with open(catalog_path, encoding="utf-8") as f:
-        cat = json.load(f)
-    script = AUTO_IMPORT_TEMPLATE.replace("__CATALOG__", catalog_as_lua(cat))
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(script)
-    print(f"{out_path} écrit")
+local FBX_FOLDER = [[C:\Users\TonNom\Downloads\roblox-master\assets\rockets\fbx]]
+local ONLY: { number }? = nil -- ex. { 1, 2, 3 }
+local REPLACE_EXISTING = true
+'''
+
+
+def main():
+    cat = json.load(open(os.path.join(ROOT, "assets", "rockets", "catalog.json"), encoding="utf-8"))
+    assert all(r.get("version") == 2 for r in cat["rockets"]) and len(cat["rockets"]) == 40, "catalogue v2 incomplet"
+
+    # 1. ModuleScript typé
+    m = ["--!strict", "-- Rockets.luau — catalogue des 40 fusées v2 (GÉNÉRÉ par tools/rockets/gen_luau.py, ne pas éditer).", "",
+         "export type RocketPart = { name: string, color: Color3, kind: string }",
+         "export type RocketAura = { color: Color3, strength: number }",
+         "export type RocketDef = {", "\tid: number, key: string, name: string, world: number, height: number,",
+         "\tmultiplier: number, cost: number, file: string, aura: RocketAura, parts: { RocketPart },", "}",
+         "export type WorldDef = { id: number, name: string, subtitle: string, color: Color3 }", "",
+         "local Rockets = {}", "", "Rockets.Worlds: { WorldDef } = {"]
+    for wid, wd in sorted(cat["worlds"].items(), key=lambda kv: int(kv[0])):
+        m.append(f"\t{{ id = {wid}, name = {s(wd['name'])}, subtitle = {s(wd['subtitle'])}, color = {c3(wd['color'])} }},")
+    m += ["}", "", "Rockets.List: { RocketDef } = " + catalog_lua(cat), "",
+          "Rockets.ById: { [number]: RocketDef } = {}", "Rockets.ByKey: { [string]: RocketDef } = {}",
+          "for _, def in Rockets.List do", "\tRockets.ById[def.id] = def", "\tRockets.ByKey[def.key] = def", "end", "",
+          "function Rockets.get(id: number): RocketDef?", "\treturn Rockets.ById[id]", "end", "",
+          "function Rockets.forWorld(world: number): { RocketDef }", "\tlocal out = {}", "\tfor _, def in Rockets.List do",
+          "\t\tif def.world == world then", "\t\t\ttable.insert(out, def)", "\t\tend", "\tend", "\treturn out", "end", "",
+          "return Rockets", ""]
+    os.makedirs(os.path.join(ROOT, "src", "shared", "Config"), exist_ok=True)
+    open(os.path.join(ROOT, "src", "shared", "Config", "Rockets.luau"), "w", encoding="utf-8").write("\n".join(m))
+
+    by_id = "local CATALOG = {}\nfor _, def in (" + catalog_lua(cat) + ") do\n\tCATALOG[def.id] = def\nend\n"
+
+    # 2. Application seule
+    open(os.path.join(HERE, "ApplyRockets.studio.luau"), "w", encoding="utf-8").write(
+        APPLY_SCRIPT.replace("__CATALOG__", by_id).replace("__LIB__", APPLY_LIB))
+
+    # 3. Import automatique (barre de commande)
+    open(os.path.join(HERE, "AutoImportRockets.studio.luau"), "w", encoding="utf-8").write(
+        AUTO_HEAD + by_id + APPLY_LIB + AUTO_BODY + "\nrun()\n")
+
+    # 4. Plugin
+    plugin = (AUTO_HEAD + by_id + APPLY_LIB + AUTO_BODY +
+              '\nif game:GetService("RunService"):IsRunning() then\n\treturn\nend\n'
+              'local toolbar = plugin:CreateToolbar("Fusées")\n'
+              'local button = toolbar:CreateButton("Importer les 40 fusées", "Importe les FBX v2 et applique le style métal cartoon", "rbxassetid://4458901886")\n'
+              'button.ClickableWhenViewportHidden = true\n'
+              'button.Click:Connect(function()\n\tprint("[Fusées] import en cours…")\n\tlocal ok, err = pcall(run)\n\tif not ok then\n\t\twarn("[Fusées] " .. tostring(err))\n\tend\nend)\n')
+    open(os.path.join(HERE, "RocketImporterPlugin.lua"), "w", encoding="utf-8").write(plugin)
+    print("Rockets.luau, ApplyRockets, AutoImportRockets et RocketImporterPlugin générés (40 fusées v2)")
 
 
 if __name__ == "__main__":
-    write_auto_import(
-        os.path.join(HERE, "..", "..", "assets", "rockets", "catalog.json"),
-        os.path.join(HERE, "AutoImportRockets.studio.luau"),
-    )
-
-
-# ---------------------------------------------------------------------------
-# Version plugin Studio : même logique, déclenchée par un bouton de barre d'outils.
-# S'installe en copiant le fichier dans le dossier Plugins local de Studio
-# (Windows : %LOCALAPPDATA%\Roblox\Plugins ; Mac : ~/Documents/Roblox/Plugins).
-# ---------------------------------------------------------------------------
-
-def write_plugin(catalog_path, out_path):
-    with open(catalog_path, encoding="utf-8") as f:
-        cat = json.load(f)
-    body = AUTO_IMPORT_TEMPLATE.replace("__CATALOG__", catalog_as_lua(cat))
-    # Isole le corps dans une fonction run() ; la config et le catalogue restent globaux au plugin.
-    marker = 'local ReplicatedStorage = game:GetService("ReplicatedStorage")'
-    head, tail = body.split(marker, 1)
-    tail = marker + tail
-    tail = "\n".join("\t" + ln if ln.strip() else ln for ln in tail.splitlines())
-    plugin = (
-        head
-        + "local RunService = game:GetService(\"RunService\")\n"
-        + "if RunService:IsRunning() then\n\treturn\nend\n\n"
-        + "local function run()\n" + tail + "\nend\n\n"
-        + "local toolbar = plugin:CreateToolbar(\"Fusées\")\n"
-        + "local button = toolbar:CreateButton(\"Importer les 40 fusées\", \"Importe les FBX et applique couleurs et auras\", \"rbxassetid://4458901886\")\n"
-        + "button.ClickableWhenViewportHidden = true\n"
-        + "button.Click:Connect(function()\n\tprint(\"[Fusées] import en cours…\")\n\tlocal ok, err = pcall(run)\n\tif not ok then\n\t\twarn(\"[Fusées] \" .. tostring(err))\n\tend\nend)\n"
-    )
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(plugin)
-    print(f"{out_path} écrit")
-
-
-if __name__ == "__main__":
-    write_plugin(
-        os.path.join(HERE, "..", "..", "assets", "rockets", "catalog.json"),
-        os.path.join(HERE, "RocketImporterPlugin.lua"),
-    )
+    main()
