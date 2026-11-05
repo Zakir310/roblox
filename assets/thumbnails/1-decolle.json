@@ -1,0 +1,41 @@
+{
+  "tool": "rxz roblox-thumbnail",
+  "version": 1,
+  "canvas": [
+    1920,
+    1080
+  ],
+  "art": "/tmp/claude-0/thumbs/final/launch.png",
+  "game": "1+ fus\u00e9e",
+  "title": "D\u00c9COLLE !",
+  "kicker": "+1 \u00c0 CHAQUE LANCER",
+  "zone": "lower-left",
+  "lines": [
+    "D\u00c9COLLE !"
+  ],
+  "art_stats": {
+    "mean": 161.3,
+    "range": 139,
+    "border_edge": 2.23,
+    "center_edge": 8.71,
+    "clutter": 0.26,
+    "hues": 2,
+    "focal": 1.98
+  },
+  "style": "shout",
+  "font_size": 197,
+  "cap_height": 194,
+  "cap_pct": 18.0,
+  "stroke": 12,
+  "words": 2,
+  "box": [
+    115,
+    651,
+    835,
+    965
+  ],
+  "margin_ok": true,
+  "hits_reserved_corner": false,
+  "contrast": 3.62,
+  "title_color": "#FFFFFF"
+}

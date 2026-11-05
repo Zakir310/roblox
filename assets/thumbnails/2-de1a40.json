@@ -1,0 +1,41 @@
+{
+  "tool": "rxz roblox-thumbnail",
+  "version": 1,
+  "canvas": [
+    1920,
+    1080
+  ],
+  "art": "/tmp/claude-0/thumbs/final/split.png",
+  "game": "1+ fus\u00e9e",
+  "title": "1 \u2192 40",
+  "kicker": "D\u00c9BLOQUE 40 FUS\u00c9ES",
+  "zone": "lower-center",
+  "lines": [
+    "1 \u2192 40"
+  ],
+  "art_stats": {
+    "mean": 127.1,
+    "range": 194,
+    "border_edge": 2.77,
+    "center_edge": 8.31,
+    "clutter": 0.33,
+    "hues": 6,
+    "focal": 1.72
+  },
+  "style": "shout",
+  "font_size": 197,
+  "cap_height": 194,
+  "cap_pct": 18.0,
+  "stroke": 12,
+  "words": 3,
+  "box": [
+    628,
+    651,
+    1291,
+    965
+  ],
+  "margin_ok": true,
+  "hits_reserved_corner": false,
+  "contrast": 4.75,
+  "title_color": "#FFFFFF"
+}

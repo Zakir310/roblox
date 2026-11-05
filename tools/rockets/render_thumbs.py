@@ -318,7 +318,7 @@ def scene_hero(c):
     cartoon_plume(c, base, axis, length=7.0, radius=0.95, seed=9, palette=["#FFFFF5", "#FFF07A", "#FFC23B", "#FF8A1F"])
     area(c, "Rim", (5, 8, 10), (0, 0, 4), 3500, (1.0, 0.85, 0.5), 4)
     area(c, "Key", (-8, -9, 6), (0, 0, 4), 1800, (0.8, 0.85, 1.0), 6)
-    camera(c, (-4.0, -21, 0.6), (3.0, 0, 2.8), 40)
+    camera(c, (-4.0, -23, 1.2), (3.0, 0, 3.4), 40)
 
 
 SCENES = {"launch": scene_launch, "before": scene_before, "after": scene_after, "hero": scene_hero}

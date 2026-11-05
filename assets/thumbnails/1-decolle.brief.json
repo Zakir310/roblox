@@ -3,9 +3,9 @@
   "text": {
     "style": "shout",
     "color": "#FFFFFF",
-    "accent": "#FFB300",
-    "stroke": "#0B0B12",
-    "plate": "auto",
+    "accent": "#FFC21F",
+    "stroke": "#0A1A3A",
+    "plate": true,
     "align": "left",
     "max_width": 0.62,
     "zone": "lower-left",

@@ -1,0 +1,41 @@
+{
+  "tool": "rxz roblox-thumbnail",
+  "version": 1,
+  "canvas": [
+    1920,
+    1080
+  ],
+  "art": "/tmp/claude-0/thumbs/final/hero.png",
+  "game": "1+ fus\u00e9e",
+  "title": "L'ESPACE !",
+  "kicker": "TOUJOURS PLUS HAUT",
+  "zone": "upper-right",
+  "lines": [
+    "L'ESPACE !"
+  ],
+  "art_stats": {
+    "mean": 51.4,
+    "range": 231,
+    "border_edge": 8.42,
+    "center_edge": 10.04,
+    "clutter": 0.84,
+    "hues": 3,
+    "focal": 4.09
+  },
+  "style": "shout",
+  "font_size": 197,
+  "cap_height": 194,
+  "cap_pct": 18.0,
+  "stroke": 12,
+  "words": 2,
+  "box": [
+    1037,
+    115,
+    1805,
+    411
+  ],
+  "margin_ok": true,
+  "hits_reserved_corner": false,
+  "contrast": 19.13,
+  "title_color": "#FFFFFF"
+}
