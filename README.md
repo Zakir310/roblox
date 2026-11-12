@@ -5,9 +5,11 @@ on monte toujours plus haut, on débloque 40 fusées réparties en 4 mondes.
 
 | Dossier | Contenu |
 |---|---|
-| `docs/` | Analyse du jeu de référence et guides (import des fusées…) |
+| `docs/` | Analyse du jeu de référence et guides (import des fusées, interface…) |
 | `assets/rockets/` | Les 40 fusées 3D (FBX/OBJ), aperçus, planche, catalogue JSON, scène Blender |
 | `tools/rockets/` | Générateur Blender des fusées, générateur du catalogue Luau, script d'import Studio |
+| `tools/ui/` | Version « un seul script » de l'interface (`PixelHud.standalone.client.luau`) et son générateur |
+| `assets/ui/` | Aperçus de l'interface |
 | `src/shared/` | Code Luau partagé (configs, types) → `ReplicatedStorage.Shared` |
 | `src/server/` | Code serveur → `ServerScriptService.Server` |
 | `src/client/` | Code client → `StarterPlayer.StarterPlayerScripts.Client` |
@@ -15,3 +17,4 @@ on monte toujours plus haut, on débloque 40 fusées réparties en 4 mondes.
 Synchronisation avec Studio : [Rojo](https://rojo.space) et `default.project.json`.
 
 Voir `docs/02-import-fusees-roblox.md` pour importer les fusées dans Roblox Studio.
+Voir `docs/03-interface-pixel.md` pour l'interface « pixel cubique » (boutons, compteurs, barre de puissance).
