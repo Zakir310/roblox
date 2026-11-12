@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<title>TechScope — accroche</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #scene { position: relative; transform-origin: center; }
+  #scene canvas { position: absolute; left: 0; top: 0; }
+</style>
+<div id="scene"></div>
+<script type="module">
+  // scene.html?v=A|B|C&w=1080&h=1920 — ajouter &capture=1 pour le rendu image par image.
+  import { demarre } from './shared/core.js';
+  const v = (new URLSearchParams(location.search).get('v') || 'A').toUpperCase();
+  const fichier = { A: './a-mur.js', B: './b-0700.js', C: './c-onglets.js' }[v];
+  demarre(v, (await import(fichier)).default);
+</script>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "techscope-pub",
+  "private": true,
+  "type": "module",
+  "description": "Trois accroches publicitaires de 6 secondes pour TechScope, fabriquées par code.",
+  "scripts": {
+    "apercu": "node tools/serveur.mjs",
+    "son": "node tools/son.mjs",
+    "rendu": "node tools/rendu.mjs"
+  }
+}
