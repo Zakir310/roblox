@@ -33,6 +33,9 @@ end
 
 -- Multiplicateur : 10.5 → « 10.5 », 3 → « 3 », 1250 → « 1.2K ».
 function FormatNumber.multiplier(n: number): string
+	if n ~= n or n == math.huge or n == -math.huge then
+		return "1"
+	end
 	if n >= 1000 then
 		return FormatNumber.short(n)
 	end

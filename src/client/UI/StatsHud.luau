@@ -275,7 +275,8 @@ function StatsHud.new(parent: Instance, margin: number): Handle
 	task.spawn(function()
 		while alive do
 			task.wait(if progress >= 1 then 1.4 else 3)
-			if progress > 0 then
+			local gui = power:FindFirstAncestorOfClass("ScreenGui")
+			if progress > 0 and (gui == nil or gui.Enabled) then
 				barShine()
 			end
 		end

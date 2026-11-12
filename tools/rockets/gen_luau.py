@@ -383,11 +383,13 @@ def main():
          "export type RocketDef = {", "\tid: number, key: string, name: string, world: number, height: number,",
          "\tmultiplier: number, cost: number, file: string, aura: RocketAura, parts: { RocketPart },", "}",
          "export type WorldDef = { id: number, name: string, subtitle: string, color: Color3 }", "",
-         "local Rockets = {}", "", "Rockets.Worlds: { WorldDef } = {"]
+         "local Rockets = {}", "",
+         "-- (Luau n'accepte pas d'annotation de type sur un champ : `Rockets.X: T = …` ne compile pas, on caste.)",
+         "Rockets.Worlds = {"]
     for wid, wd in sorted(cat["worlds"].items(), key=lambda kv: int(kv[0])):
         m.append(f"\t{{ id = {wid}, name = {s(wd['name'])}, subtitle = {s(wd['subtitle'])}, color = {c3(wd['color'])} }},")
-    m += ["}", "", "Rockets.List: { RocketDef } = " + catalog_lua(cat), "",
-          "Rockets.ById: { [number]: RocketDef } = {}", "Rockets.ByKey: { [string]: RocketDef } = {}",
+    m += ["} :: { WorldDef }", "", "Rockets.List = " + catalog_lua(cat) + " :: { RocketDef }", "",
+          "Rockets.ById = {} :: { [number]: RocketDef }", "Rockets.ByKey = {} :: { [string]: RocketDef }",
           "for _, def in Rockets.List do", "\tRockets.ById[def.id] = def", "\tRockets.ByKey[def.key] = def", "end", "",
           "function Rockets.get(id: number): RocketDef?", "\treturn Rockets.ById[id]", "end", "",
           "function Rockets.forWorld(world: number): { RocketDef }", "\tlocal out = {}", "\tfor _, def in Rockets.List do",

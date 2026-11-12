@@ -42,6 +42,8 @@ Hud.Palettes = {
 	Red = { top = hex("#F7271C"), bottom = hex("#DF0F14"), lip = hex("#8F0010") },
 	BadgeRed = { top = hex("#FB2A33"), bottom = hex("#D90511"), lip = hex("#A4030D") },
 	BadgeBlue = { top = hex("#2ECDFE"), bottom = hex("#0EA1F1"), lip = hex("#0564AF") },
+	BadgeGreen = { top = hex("#5EEB3C"), bottom = hex("#25B51C"), lip = hex("#127A0C") },
+	Locked = { top = hex("#9A9AAE"), bottom = hex("#6E6E84"), lip = hex("#4A4A5C") },
 	Bar = { top = hex("#00BEFF"), bottom = hex("#0064FF"), lip = hex("#003BB3") },
 } :: { [string]: Palette }
 
@@ -140,9 +142,74 @@ Hud.Texts = {
 	Boost = "x%s Boost",
 	BarLeft = "Rebirth %s",
 	BarRight = "%s/%s Power",
-	ComingSoon = "Coming soon!",
-	NotConnected = "%s : bientôt branché",
+	ComingSoon = "%s coming soon!", -- message en haut de l'écran (%s = nom du bouton)
+	Ready = "READY", -- badge du Rebirth quand la Power suffit
+	-- Panneau Rebirth
+	Before = "Before",
+	After = "After",
+	PowerTag = "POWER",
+	Resets = "Resets your POWER!",
+	RebirthPower = "%s/%s Power",
+	RebirthButton = "Rebirth",
+	SkipRebirth = "Skip Rebirth",
+	NotEnoughPower = "Not enough Power!",
+	NotEnoughWins = "Not enough Wins!",
+	-- Panneaux Backpack / Index
+	Category = "ROCKETS",
+	Equip = "EQUIP",
+	Equipped = "EQUIPPED",
+	PowerStat = "POWER",
+	PriceStat = "PRICE",
+	Free = "FREE",
+	Unknown = "???",
+	Buy = "%s Wins",
+	-- Panneau Settings
+	Audio = "AUDIO",
+	Gameplay = "GAMEPLAY",
+	Music = "Music",
+	MusicHint = "Background music",
+	Sound = "Sound",
+	SoundHint = "Splats and effects",
+	ReducedMotion = "Reduced Motion",
+	ReducedMotionHint = "Fewer flashes and effects",
+	On = "ON",
+	Off = "OFF",
 }
+
+-- Fenêtres (Rebirth, Backpack, Index, Settings).
+Hud.Panel = {
+	Background = hex("#ECECF8"), -- fond clair des fenêtres
+	Blur = 16, -- flou du décor quand une fenêtre est ouverte (0 = pas de flou)
+	-- Motif « plaque de briques » du fond : importe assets/ui/textures/brick_tile.png dans Roblox et colle
+	-- son ID ici pour le rendu exact ; vide = quadrillage léger construit en code.
+	BrickTile = "",
+	BrickRatio = 0.026, -- taille d'une brique du fond / hauteur de la fenêtre
+	CenterY = 0.47, -- centre vertical des fenêtres (0 = haut, 1 = bas)
+	CellOfScreen = 0.114, -- taille d'une case (bouton carré du menu) en fraction de la hauteur d'écran
+}
+
+-- Couleur des cartes de fusées selon le monde (clés de Hud.Palettes).
+Hud.WorldPalettes = { [1] = "Lime", [2] = "Blue", [3] = "Amber", [4] = "Magenta" } :: { [number]: string }
+
+-- Icônes des fenêtres et des réglages.
+Hud.PanelIcons = {
+	Rocket = { image = "", emoji = "🚀" },
+	Gear = { image = "", emoji = "⚙️" },
+} :: { [string]: IconDef }
+
+-- Réglages par défaut (panneau Settings).
+Hud.Settings = {
+	Music = 83, -- volume 0..100, appliqué au SoundGroup « Music » de SoundService s'il existe
+	Sound = 61, -- volume 0..100, appliqué au SoundGroup « SFX » de SoundService s'il existe
+	MusicGroup = "Music",
+	SoundGroup = "SFX",
+	ReducedMotion = false,
+}
+
+-- Boost après le prochain rebirth (panneau Rebirth, « After ») si le serveur ne pose pas l'attribut NextBoost.
+function Hud.NextBoost(boost: number, _rebirths: number): number
+	return boost + 0.5
+end
 
 -- Où lire les valeurs du joueur.
 Hud.Stats = {
@@ -152,6 +219,9 @@ Hud.Stats = {
 	Power = "Power",
 	BoostAttribute = "Boost", -- attribut numérique posé sur le Player par le serveur (ex. 10.5)
 	RebirthCostAttribute = "RebirthCost", -- attribut numérique : Power nécessaire au prochain rebirth
+	NextBoostAttribute = "NextBoost", -- attribut numérique : boost après le prochain rebirth
+	OwnedAttribute = "OwnedRockets", -- attribut texte : ids des fusées possédées, ex. "1,2,5"
+	EquippedAttribute = "EquippedRocket", -- attribut numérique : id de la fusée équipée
 	ProgressButton = "Rebirth", -- bouton dont le badge affiche la progression du rebirth
 	WaitForFolder = 4, -- secondes avant de passer en mode démo si leaderstats n'existe pas
 }
@@ -169,6 +239,8 @@ Hud.Demo = {
 	Power = 157_000_000,
 	Boost = 10.5,
 	RebirthCost = 157_400_000,
+	Owned = { 1, 2, 3, 4, 5, 6, 7, 8, 9 },
+	Equipped = 1,
 }
 
 return Hud

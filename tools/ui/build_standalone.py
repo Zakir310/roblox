@@ -23,10 +23,15 @@ OUT = ROOT / "tools/ui/PixelHud.standalone.client.luau"
 # Ordre de dépendance : un module n'utilise que ceux listés avant lui.
 MODULES = [
     ("HudConfig", "src/shared/Config/Hud.luau"),
+    ("Rockets", "src/shared/Config/Rockets.luau"),
     ("FormatNumber", "src/shared/Util/FormatNumber.luau"),
     ("PixelFx", "src/client/UI/PixelFx.luau"),
     ("PixelButton", "src/client/UI/PixelButton.luau"),
+    ("PixelPanel", "src/client/UI/PixelPanel.luau"),
     ("StatsHud", "src/client/UI/StatsHud.luau"),
+    ("RebirthPanel", "src/client/UI/Panels/RebirthPanel.luau"),
+    ("SettingsPanel", "src/client/UI/Panels/SettingsPanel.luau"),
+    ("RocketsPanel", "src/client/UI/Panels/RocketsPanel.luau"),
     ("HudController", "src/client/Controllers/HudController.luau"),
 ]
 MAIN = "src/client/Main.client.luau"
@@ -48,6 +53,9 @@ def transform(source: str, known: set[str], path: str) -> str:
             if name not in known:
                 sys.exit(f"{path}:{number}: module {name} inconnu ou déclaré après ce fichier")
             line = line[: match.start()] + f"__modules.{name}"
+        elif re.search(r"\brequire\(", line) and not line.lstrip().startswith("--"):
+            # Un require non marqué attendrait à l'infini un module absent de la version autonome.
+            sys.exit(f"{path}:{number}: require sans marqueur -- @bundle:Nom : {line.strip()}")
         # `export type` n'est permis qu'au niveau supérieur d'un module ; ici on est dans une fonction.
         line = re.sub(r"^(\s*)export type ", r"\1type ", line)
         out.append(line)
@@ -64,6 +72,9 @@ def main() -> None:
         "--   1. Dans Studio : StarterPlayer > StarterPlayerScripts > + > LocalScript, nomme-le PixelHud.",
         "--   2. Colle tout ce fichier dedans, puis Play.",
         "--   3. Pour tes icônes : modifie la section CONFIGURATION juste en dessous (champ `image`).",
+        "--   4. Pour brancher les boutons, ajoute ton code TOUT EN BAS, après HudController.Start() :",
+        "--        HudController.On(\"Rebirth\", function() ... end)",
+        "-- N'utilise pas ce script ET la version Rojo (src/client) en même temps : choisis l'une ou l'autre.",
         "",
         "local __modules = {}",
     ]

@@ -11,14 +11,15 @@ export type WorldDef = { id: number, name: string, subtitle: string, color: Colo
 
 local Rockets = {}
 
-Rockets.Worlds: { WorldDef } = {
+-- (Luau n'accepte pas d'annotation de type sur un champ : `Rockets.X: T = …` ne compile pas, on caste.)
+Rockets.Worlds = {
 	{ id = 1, name = "Débutant", subtitle = "Fusées simples, bricolées et légères", color = Color3.fromRGB(56, 212, 48) },
 	{ id = 2, name = "Technologie", subtitle = "Fusées améliorées, plus rapides et plus stables", color = Color3.fromRGB(48, 200, 255) },
 	{ id = 3, name = "Expérimental", subtitle = "Fusées avancées, modules spéciaux et nouvelles énergies", color = Color3.fromRGB(255, 177, 59) },
 	{ id = 4, name = "Légendaire", subtitle = "Fusées d'élite, ultra-performantes et à la technologie ultime", color = Color3.fromRGB(210, 59, 255) },
-}
+} :: { WorldDef }
 
-Rockets.List: { RocketDef } = {
+Rockets.List = {
 	{ id = 1, key = "Firecracker", name = "Pétard", world = 1, height = 7.96, multiplier = 1, cost = 0, file = "Rocket_01_Firecracker",
 		aura = { color = Color3.fromRGB(255, 177, 59), strength = 0.4 },
 		parts = {
@@ -1060,10 +1061,10 @@ Rockets.List: { RocketDef } = {
 			{ name = "WingGlow_2", color = Color3.fromRGB(94, 242, 255), kind = "glow" },
 		},
 	},
-}
+} :: { RocketDef }
 
-Rockets.ById: { [number]: RocketDef } = {}
-Rockets.ByKey: { [string]: RocketDef } = {}
+Rockets.ById = {} :: { [number]: RocketDef }
+Rockets.ByKey = {} :: { [string]: RocketDef }
 for _, def in Rockets.List do
 	Rockets.ById[def.id] = def
 	Rockets.ByKey[def.key] = def
