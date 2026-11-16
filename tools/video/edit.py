@@ -95,15 +95,15 @@ def render(a):
     W, H = (1920, 1080) if a.format == "yt" else (1080, 1920)
     if a.format == "yt":
         PW, PH, PY = W, H, 0                       # zone image
-        title_px, cap_px = 330, 34
+        title_px, cap_px = 330, 42
     else:
         PW, PH = 1080, 1440
         PY = (H - PH) // 2
-        title_px, cap_px = 300, 34
+        title_px, cap_px = 300, 40
     cy = H // 2
     base_mask = text_mask((W, H), TITLE, FONT, title_px, -0.035)
     cap_mask = text_mask((W, H), CAPTION, FONT2, cap_px, 0.42)
-    cap_dy = int(title_px * 0.56)
+    cap_dy = int(title_px * 0.60)
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     vig = 1 - 0.22 * np.clip(((xx - W / 2) / (W * 0.62)) ** 2 + ((yy - H / 2) / (H * 0.62)) ** 2, 0, 1)
     vig = vig[..., None].astype(np.float32)
@@ -115,7 +115,7 @@ def render(a):
         pipe = None
     else:
         cmd = ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-               "-i", a.audio, "-c:v", "libx264", "-preset", "slow", "-crf", "15", "-pix_fmt", "yuv420p", "-profile:v", "high",
+               "-i", a.audio, "-c:v", "libx264", "-preset", "slow", "-crf", "19", "-pix_fmt", "yuv420p", "-profile:v", "high",
                "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709",
                "-c:a", "aac", "-b:a", "256k", "-af", f"afade=t=out:st={(NV + TAIL) / FPS - 0.5}:d=0.5",
                "-t", f"{(NV + TAIL) / FPS:.3f}", "-movflags", "+faststart", a.out]
@@ -190,13 +190,13 @@ def render(a):
                 al = min(1.0, (k - 8) / 5.0)
                 off = int((1 - al) * 14)
                 cm = np.asarray(cap_mask.transform(cap_mask.size, Image.AFFINE, (1, 0, 0, 0, 1, -(cap_dy + off))), np.float32)[..., None] / 255.0
-                cs = np.asarray(cap_mask.filter(ImageFilter.GaussianBlur(5)).transform(cap_mask.size, Image.AFFINE, (1, 0, 0, 0, 1, -(cap_dy + off + 3))), np.float32)[..., None] / 255.0
-                canvas = canvas * (1 - 0.5 * cs * al)
+                cs = np.asarray(cap_mask.filter(ImageFilter.GaussianBlur(9)).transform(cap_mask.size, Image.AFFINE, (1, 0, 0, 0, 1, -(cap_dy + off + 3))), np.float32)[..., None] / 255.0
+                canvas = canvas * (1 - np.clip(cs * 2.2, 0, 1) * 0.6 * al)
                 canvas = canvas * (1 - cm * al) + 255.0 * cm * al
             canvas = canvas * vig
             if hit and k < 3:                                         # flash blanc
                 canvas = canvas + (255 - canvas) * (0.55, 0.28, 0.1)[k] * min(1.0, hit)
-            canvas = canvas + rng.normal(0, 2.2, (H, W, 1)).astype(np.float32)   # grain
+            canvas = canvas + rng.normal(0, 1.3, (H, W, 1)).astype(np.float32)   # grain
             # --- barres noires : ouverture / fermeture
             op = 1.0
             if g < OPEN:
